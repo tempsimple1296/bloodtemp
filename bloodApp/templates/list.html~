@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>All USERS</title>
+
+	{% load staticfiles%}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+<!--	<script>
+		location.href+=document.getElementByName('searchBox').value;
+	</script>-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">BLOOD APP</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Home</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <!--form class="navbar-form navbar-right">
+            
+          </form-->
+        <form class="navbar-form navbar-right" action="/group/" method="post">
+		{% csrf_token %}
+		<div class="form-group">	      
+			<input type="text" class="form-control" id="loc" name="loc" placeholder="Enter Location here...">		
+			<input type="text" class="form-control" id="bd" name="group" bloodGroup placeholder="Search For Blood Group...">
+		</div>     
+		<button type="submit" class="btn btn-default" value="submit">Submit</button>
+		</form>
+	 </div>
+      </div>
+    </div><div class="jumbotron">
+	<h2>See Location Wise Results</h2>
+<br>
+<p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></p>
+  <h4>Click here</h4>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Search</h4>
+      </div>
+      <div class="modal-body">
+         <form class="navbar-form navbar-right" action="/count/" method="post">
+		{% csrf_token %}
+		<div class="form-group">	
+<select id="id_userLoc" name="loc">
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh (UT)</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
+<option value="Daman and Diu ">Daman and Diu (UT)</option>
+<option value="Delhi">Delhi (UT)</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujrat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Lakshadweep">Lakshadweep (UT)</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalya">Meghalya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Pondicherry">Pondicherry (UT)</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tanil Nadu">Tamil Nadu</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+</select>      
+		<!--input type="text" class="form-control" id="loc" name="loc" placeholder="Enter Location  here..."-->			
+		</div>  
+		<button type="submit" class="btn btn-default" value="submit">Submit</button>
+	</form>
+      </div>
+      <div class="modal-footer">
+	<br>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+
+         <h2 class="sub-header"></h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>NAME</th>
+                  <th>AGE</th>
+                  <th>LOCATION</th>
+                  <th>BLOOD GROUP</th>
+		  <th>REGISTERED ON</th>
+                </tr>
+              </thead>
+              <tbody>
+				
+			{% for u in users %}
+                <tr>
+                  <td>{{u.userName}}</td>
+                  <td>{{u.userAge}}</td>
+                  <td>{{u.userLoc}}</td>
+                  <td>{{u.userBloodGroup}}</td>
+		  <td>{{u.time}}</td>
+                </tr>
+			{% endfor %}
+                
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+<!-- Button trigger modal -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    
+  </body>
+</html>
