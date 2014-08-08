@@ -87,29 +87,53 @@ def profile(request):
 def home(request):
 	return render_to_response('sexy.html')
 
+def fbRegister(request):
+	form={}
+	if request.method=='POST':
+		form = RegisterationForm(request.POST)
+		if form.is_valid():				
+			entry = form.save()
+			return HttpResponseRedirect('/listUsers')
+
 def register(request):
 	form = {}
 	context = {}
 	if request.method=='POST':
 		form = RegisterationForm(request.POST)
-		
+		#form.fields['userContact'].initial = json_data["link"]
+		print form
 		if form.is_valid():		
-			#print form.cleaned_data['userName']			
+			print form.cleaned_data['userName']			
+			print form.cleaned_data['userAge']			
+			print form.cleaned_data['userBloodGroup']			
+			print form.cleaned_data['userContact']			
+			print form.cleaned_data['userLoc']			
+			print form.cleaned_data['time']			
+				
 			entry = form.save()
 			return HttpResponseRedirect('/listUsers')
-	
+		else:
+			print 'form not valid'
 	if request.method=='GET':
 		form = RegisterationForm()
 
 	context = {'form':form}
+	
 	id_index = UserSocialAuth.objects.filter(provider='facebook').count()
 	instance = UserSocialAuth.objects.filter(provider='facebook').get(id=id_index)	
 	#json parsing	
 	a = json.dumps(instance.tokens)
 	token = json.loads(a)["access_token"]
 	data=urlopen("https://graph.facebook.com/me?access_token="+token).read()
-	print '---------------------------------------'
-	print 'json wala email--->',json.loads(data)["email"]
+	#print '---------------------------------------'
+	#print 'json wala email--->',json.loads(data)["email"]	
+	#print '---------------------------------------'
+	#print '------------Birthday--------------'
+	#print json.loads(data)["birthday"]
+	json_data = json.loads(data)
+	form.fields['userName'].initial = json_data["name"]
+	form.fields['userContact'].initial = json_data["link"] 	
+	print form.fields['userContact'].initial 	
 	#a=json.loads(instance.tokens)
 	#_id = user_social_auth.get(provider='facebook').uid
 #	_id = UserSocialAuth.objects.filter(provider='facebook')

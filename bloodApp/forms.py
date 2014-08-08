@@ -58,12 +58,14 @@ class RegisterationForm(ModelForm):
 	userLoc=forms.ChoiceField(choices=ALL_LOCATIONS)
 	class Meta:
 		model=User
-		fields = 'userName','userAge','userBloodGroup','userLoc','time'
+		#fields = 'userName','userAge','userBloodGroup','userLoc','time'
+		fields = '__all__'		
 		widgets = {
             		'userName': forms.TextInput(attrs={'class': 'form-control '}),
         		'userAge': forms.TextInput(attrs={'class': 'form-control'}),
 			'userBloodGroup': forms.TextInput(attrs={'class': 'form-control'}),
 			'userLoc': forms.TextInput(attrs={'class': 'form-control'}),
-			'time': forms.TextInput(attrs={'class': 'form-control'}),			
+			'time': forms.TextInput(attrs={'class': 'form-control'}),
+			'userContact': forms.TextInput(attrs={'type':'hidden'}),			
 		}
 

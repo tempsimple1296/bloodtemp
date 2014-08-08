@@ -67,7 +67,11 @@ FACEBOOK_APP_ID = '884234344938916'
 FACEBOOK_API_SECRET = 'de9ee3c42f53d4d28284751e7e0b18f5'
 SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
-FACEBOOK_EXTENDED_PERMISSIONS = ['email','user_about_me','user_birthday']
+#FACEBOOK_EXTENDED_PERMISSIONS = ['email','user_about_me','user_birthday']
+SOCIAL_AUTH_FACEBOOK_EXTENDED_PERMISSIONS = ['email', 'user_birthday']
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_birthday']
+
+
 LOGIN_URL = '/account/login/'
 #LOGIN_REDIRECT_URL = '/'
 LOGIN_ERROR_URL = '/account/error/'

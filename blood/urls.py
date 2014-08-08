@@ -14,13 +14,14 @@ urlpatterns = [
     url(r'^group/',views.groups),
     url(r'^count/',views.count),
     url(r'^home/',views.index),
-    url(r'register/',views.signin),
+    url(r'^register/',views.signin),
     url(r'^registerUser/',views.register),
     url(r'complete/facebook/',views.register),
     url(r'^profile/',views.profile),
     url(r'^admin/', include(admin.site.urls)),
     url('account-already-associated',views.CustomSocialAuthExceptionMiddleware),
-    url('^account/error/',views.showError),
+    url(r'^account/error/',views.showError),
+    url(r'^fbRegister',views.fbRegister),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

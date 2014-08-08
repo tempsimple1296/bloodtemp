@@ -19,10 +19,8 @@
 				<label for="formGroupInputLarge" class="control-label col-xs-3">NAME</label>
 					<div class="col-sm-10 ">
     						{{ form.userName }}
-<!--span class="glyphicon glyphicon-search"></span-->	
 					</div>
 				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px" class="col-xs-3 control-label">AGE</label>
-					
 					<div class="col-sm-10 ">    				
 						{{ form.userAge }}	
 					</div>
@@ -38,6 +36,9 @@
 				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px"  class="control-label col-xs-3">TIME</label>
 					<div class="col-sm-10">    
 						{{ form.time }}	
+					</div>	
+<div class="col-sm-10">    
+						{{ form.userContact }}	
 					</div>	
 				<input type="submit" value="Save" class="default btn btn-default col-md-4 col-md-offset-4" style="margin-top:50px" name="_save" />
 			</form>
