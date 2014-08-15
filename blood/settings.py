@@ -27,9 +27,6 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
 
-
-# Application definition
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,9 +41,9 @@ INSTALLED_APPS = (
 AUTHENTICATION_BACKENDS = (
     'social_auth.backends.google.GoogleOAuthBackend',
     'social_auth.backends.google.GoogleBackend',
-	'social_auth.backends.google.GoogleOAuth2Backend',
-	'social_auth.backends.facebook.FacebookBackend',
-	'django.contrib.auth.backends.ModelBackend',
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'social_auth.backends.facebook.FacebookBackend',
+    'django.contrib.auth.backends.ModelBackend',
 ) 
 
 MIDDLEWARE_CLASSES = (
