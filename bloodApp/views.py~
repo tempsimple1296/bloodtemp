@@ -97,7 +97,7 @@ def fbRegister(request):
 def register(request):
 	form = {}
 	context = {}
-		
+	
 	print '------------------'
 	print request.method
 	print '------------------'
@@ -120,12 +120,14 @@ def register(request):
 				context = {'age_error':''}
 				return render_to_response('age_error.html',context,context_instance=RequestContext(request))	
 			entry = form.save()
+			request.session.flush()
 			return HttpResponseRedirect('/listUsers')
 		else:
 			#print form.fields['userContact'].initial
 			#print form.fields['userName'].initial
 			print 'form not valid'
 			context = {'form': form.errors}
+			request.session.flush()
 			return render_to_response('error.html',context,context_instance=RequestContext(request))
 			
 	else:
@@ -142,7 +144,6 @@ def register(request):
 		else:
 			#print "Provider--->"
 			#print request
-			
 			form = RegisterationForm()
 			context = {'form':form}
 			provider = request.session.get('social_auth_last_login_backend')
