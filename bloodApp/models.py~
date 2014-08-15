@@ -10,11 +10,7 @@ class User(models.Model):
 	userLoc = models.CharField(max_length=50)	
 	userBloodGroup = models.CharField(max_length=3,validators=[RegexValidator(r'^(A|B|AB|O|a|b|ab|o)[+-]$','Enter A Valid Human BloodGroup..!!!')])
 	time = models.DateTimeField('date published',default=timezone.now)
-<<<<<<< HEAD
 	userContact = models.CharField(max_length=150,unique=True)
-=======
-	userContact = models.CharField(max_length=150)
->>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 	def timeSet(self):
 		return self.time.date == datetime.date.today()
 

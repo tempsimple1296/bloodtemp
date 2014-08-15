@@ -10,6 +10,17 @@
 	<h1>Register For Blood App</h1>
         <p class="lead">Just By Donating Blood , You Can Save Someone's Life...</p>
       </div>
+
+    {% if form.errors %}
+        {% for field in form %}
+        {% for error in field.errors %}
+            <p> {{ errors }} </p>
+        {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+        <p> {{ error }} </p>
+        {% endfor %}
+    {% endif %}
     <div id="example" class="container">
 	<div class="row">
 	<div class="form-group form-group-lg">
@@ -33,23 +44,16 @@
 						{{ form.userBloodGroup }}
 				
 					</div>
-<<<<<<< HEAD
 				<!--<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px"  class="control-label col-xs-3">TIME</label>-->
-=======
-				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px"  class="control-label col-xs-3">TIME</label>
->>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 					<div class="col-sm-10">    
 						{{ form.time }}	
 					</div>	
 <div class="col-sm-10">    
-<<<<<<< HEAD
 						{{form.userContact}}
-=======
-						{{ form.userContact }}	
->>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 					</div>	
 				<input type="submit" value="Save" class="default btn btn-default col-md-4 col-md-offset-4" style="margin-top:50px" name="_save" />
 			</form>
+
 		</div>
 	</div>       
 	</div>
