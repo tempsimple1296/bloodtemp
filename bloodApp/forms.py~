@@ -65,7 +65,11 @@ class RegisterationForm(ModelForm):
         		'userAge': forms.TextInput(attrs={'class': 'form-control'}),
 			'userBloodGroup': forms.TextInput(attrs={'class': 'form-control'}),
 			'userLoc': forms.TextInput(attrs={'class': 'form-control'}),
+<<<<<<< HEAD
 			'time': forms.TextInput(attrs={'type':'hidden'}),#{'class': 'form-control'}),#,'disabled':''}),
+=======
+			'time': forms.TextInput(attrs={'class': 'form-control'}),
+>>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 			'userContact': forms.TextInput(attrs={'type':'hidden'}),			
 		}
 

@@ -23,9 +23,14 @@ SECRET_KEY = 'jwsgn1)2jc6_bm6rhs3d558_#0bgsjxbut#fdry08(&0*(opv1'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+<<<<<<< HEAD
 #TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['localhost']
+=======
+
+ALLOWED_HOSTS = []
+>>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 
 
 # Application definition
@@ -39,6 +44,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'bloodApp',
     'social_auth',
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -105,12 +114,19 @@ DATABASES = {
 	'PORT':'3306',
     }
 }
+<<<<<<< HEAD
 
 # Internationalization
+=======
+>>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'locale': 'ru_RU'}
 
 
 
+<<<<<<< HEAD
+=======
+# Internationalization
+>>>>>>> 48a1e4ad6832f87df8c6f5eaa3f526237172f429
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
