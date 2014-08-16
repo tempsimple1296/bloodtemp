@@ -37,6 +37,18 @@ def count(request):
 			f.append(User.objects.filter(userLoc=loc).filter(userBloodGroup=bg).count())
 		_max=f[0]
 		index=0
+'''
+		print '#########################'
+		print 'f-->',f
+		print '#########################'
+'''
+		for i in xrange(0,len(f)):
+			if(f[i]==0):
+				if(i==len(f)-1):
+					return render_to_response('count.html',{'groupCount':f,'major':_max,'majorbloodGroup':"No One Registered yet..!!!"})
+			else:
+				break
+
 		for i in xrange(1,len(f)):
 			if(f[i]>_max):
 				_max=f[i]

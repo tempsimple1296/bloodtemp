@@ -47,46 +47,47 @@
 		{% csrf_token %}
 		<div class="form-group">	      
 			<!--input type="text" class="form-control" id="loc" name="loc" placeholder="Enter Location here..."-->	
-<select id="id_userLoc" name="loc">
-<option value="Andhra Pradesh">Andhra Pradesh</option>
-<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-<option value="Assam">Assam</option>
-<option value="Bihar">Bihar</option>
-<option value="Chandigarh">Chandigarh (UT)</option>
-<option value="Chhattisgarh">Chhattisgarh</option>
-<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
-<option value="Daman and Diu ">Daman and Diu (UT)</option>
-<option value="Delhi">Delhi (UT)</option>
-<option value="Goa">Goa</option>
-<option value="Gujarat">Gujrat</option>
-<option value="Haryana">Haryana</option>
-<option value="Himachal Pradesh">Himachal Pradesh</option>
-<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-<option value="Jharkhand">Jharkhand</option>
-<option value="Karnataka">Karnataka</option>
-<option value="Kerala">Kerala</option>
-<option value="Lakshadweep">Lakshadweep (UT)</option>
-<option value="Madhya Pradesh">Madhya Pradesh</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Manipur">Manipur</option>
-<option value="Meghalya">Meghalya</option>
-<option value="Mizoram">Mizoram</option>
-<option value="Nagaland">Nagaland</option>
-<option value="Odisha">Odisha</option>
-<option value="Pondicherry">Pondicherry (UT)</option>
-<option value="Punjab">Punjab</option>
-<option value="Rajasthan">Rajasthan</option>
-<option value="Sikkim">Sikkim</option>
-<option value="Tanil Nadu">Tamil Nadu</option>
-<option value="Tripura">Tripura</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="Uttarakhand">Uttarakhand</option>
-<option value="West Bengal">West Bengal</option>
-</select>      		
-			<!--<input type="text" class="form-control" id="bd" name="group" bloodGroup placeholder="Search For Blood Group...">
-		-->
+		<select id="id_userLoc" name="loc">
+			<option value="">All Locations</option>
+			<option value="Andhra Pradesh">Andhra Pradesh</option>
+			<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
+			<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+			<option value="Assam">Assam</option>
+			<option value="Bihar">Bihar</option>
+			<option value="Chandigarh">Chandigarh (UT)</option>
+			<option value="Chhattisgarh">Chhattisgarh</option>
+			<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
+			<option value="Daman and Diu ">Daman and Diu (UT)</option>
+			<option value="Delhi">Delhi (UT)</option>
+			<option value="Goa">Goa</option>
+			<option value="Gujarat">Gujrat</option>
+			<option value="Haryana">Haryana</option>
+			<option value="Himachal Pradesh">Himachal Pradesh</option>
+			<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+			<option value="Jharkhand">Jharkhand</option>
+			<option value="Karnataka">Karnataka</option>
+			<option value="Kerala">Kerala</option>
+			<option value="Lakshadweep">Lakshadweep (UT)</option>
+			<option value="Madhya Pradesh">Madhya Pradesh</option>
+			<option value="Maharashtra">Maharashtra</option>
+			<option value="Manipur">Manipur</option>
+			<option value="Meghalya">Meghalya</option>
+			<option value="Mizoram">Mizoram</option>
+			<option value="Nagaland">Nagaland</option>
+			<option value="Odisha">Odisha</option>
+			<option value="Pondicherry">Pondicherry (UT)</option>
+			<option value="Punjab">Punjab</option>
+			<option value="Rajasthan">Rajasthan</option>
+			<option value="Sikkim">Sikkim</option>
+			<option value="Tanil Nadu">Tamil Nadu</option>
+			<option value="Tripura">Tripura</option>
+			<option value="Uttar Pradesh">Uttar Pradesh</option>
+			<option value="Uttarakhand">Uttarakhand</option>
+			<option value="West Bengal">West Bengal</option>
+		</select>      		
+		<!--<input type="text" class="form-control" id="bd" name="group" bloodGroup placeholder="Search For Blood Group...">-->
 		<select id="bd" name="group">
+			<option value="">All BloodGroups</option>			
 			<option value="O+">O+</option>
 			<option value="O-">O-</option>
 			<option value="A+">A+</option>
@@ -96,17 +97,26 @@
 			<option value="AB+">AB+</option>
 			<option value="AB-">AB-</option>
 		</select>		
-	</div>     
-		<button type="submit" class="btn btn-default" value="submit">Submit</button>
-		</form>
+		</div>     
+		<button type="submit" class="btn btn-default" value="submit">Search</button>
+            </form>
 	 </div>
       </div>
-    </div><div class="jumbotron">
-	<h2>See Location Wise Results</h2>
-<br>
-<p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"></p>
-  <h4>Click here</h4>
-</button>
+    </div>
+    <div class="jumbotron">
+	<h1>See Location Wise Results</h1>
+	<br>
+	<p>
+		<h2>Why to Search Through Location Wise Result ??</h2>
+		<p>
+			This feature help us to basically know the statistics that how many people are there of different groups.
+			It also tells that the specified location has majority with which BloodGroup.<br>(Example --> Chandigarh has majority of O+)
+			<br>Hence it can also give us the idea that if quantity of some blood Group in a location is getting less so according to majority<br>(of BloodGroup) ,one can decide where to organise blood Donation Camps. 
+		</p>
+	</p>
+	<p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left:400px;margin-top:20px"></p>
+	  	<h4>SEE LOCATION WISE RESULT</h4>
+	</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -114,52 +124,52 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Search</h4>
+        <h4 class="modal-title" id="myModalLabel">Search Location Wise</h4>
       </div>
       <div class="modal-body">
          <form class="navbar-form navbar-right" action="/count/" method="post">
 		{% csrf_token %}
 		<div class="form-group">	
-<select id="id_userLoc" name="loc">
-<option value="Andhra Pradesh">Andhra Pradesh</option>
-<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
-<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-<option value="Assam">Assam</option>
-<option value="Bihar">Bihar</option>
-<option value="Chandigarh">Chandigarh (UT)</option>
-<option value="Chhattisgarh">Chhattisgarh</option>
-<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
-<option value="Daman and Diu ">Daman and Diu (UT)</option>
-<option value="Delhi">Delhi (UT)</option>
-<option value="Goa">Goa</option>
-<option value="Gujarat">Gujrat</option>
-<option value="Haryana">Haryana</option>
-<option value="Himachal Pradesh">Himachal Pradesh</option>
-<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-<option value="Jharkhand">Jharkhand</option>
-<option value="Karnataka">Karnataka</option>
-<option value="Kerala">Kerala</option>
-<option value="Lakshadweep">Lakshadweep (UT)</option>
-<option value="Madhya Pradesh">Madhya Pradesh</option>
-<option value="Maharashtra">Maharashtra</option>
-<option value="Manipur">Manipur</option>
-<option value="Meghalya">Meghalya</option>
-<option value="Mizoram">Mizoram</option>
-<option value="Nagaland">Nagaland</option>
-<option value="Odisha">Odisha</option>
-<option value="Pondicherry">Pondicherry (UT)</option>
-<option value="Punjab">Punjab</option>
-<option value="Rajasthan">Rajasthan</option>
-<option value="Sikkim">Sikkim</option>
-<option value="Tanil Nadu">Tamil Nadu</option>
-<option value="Tripura">Tripura</option>
-<option value="Uttar Pradesh">Uttar Pradesh</option>
-<option value="Uttarakhand">Uttarakhand</option>
-<option value="West Bengal">West Bengal</option>
-</select>      
+			<select id="id_userLoc" name="loc">
+				<option value="Andhra Pradesh">Andhra Pradesh</option>
+				<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
+				<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+				<option value="Assam">Assam</option>
+				<option value="Bihar">Bihar</option>
+				<option value="Chandigarh">Chandigarh (UT)</option>
+				<option value="Chhattisgarh">Chhattisgarh</option>
+				<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
+				<option value="Daman and Diu ">Daman and Diu (UT)</option>
+				<option value="Delhi">Delhi (UT)</option>
+				<option value="Goa">Goa</option>
+				<option value="Gujarat">Gujrat</option>
+				<option value="Haryana">Haryana</option>
+				<option value="Himachal Pradesh">Himachal Pradesh</option>
+				<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+				<option value="Jharkhand">Jharkhand</option>
+				<option value="Karnataka">Karnataka</option>
+				<option value="Kerala">Kerala</option>
+				<option value="Lakshadweep">Lakshadweep (UT)</option>
+				<option value="Madhya Pradesh">Madhya Pradesh</option>
+				<option value="Maharashtra">Maharashtra</option>
+				<option value="Manipur">Manipur</option>
+				<option value="Meghalya">Meghalya</option>
+				<option value="Mizoram">Mizoram</option>
+				<option value="Nagaland">Nagaland</option>
+				<option value="Odisha">Odisha</option>
+				<option value="Pondicherry">Pondicherry (UT)</option>
+				<option value="Punjab">Punjab</option>
+				<option value="Rajasthan">Rajasthan</option>
+				<option value="Sikkim">Sikkim</option>
+				<option value="Tanil Nadu">Tamil Nadu</option>
+				<option value="Tripura">Tripura</option>
+				<option value="Uttar Pradesh">Uttar Pradesh</option>
+				<option value="Uttarakhand">Uttarakhand</option>
+				<option value="West Bengal">West Bengal</option>
+			</select>      
 		<!--input type="text" class="form-control" id="loc" name="loc" placeholder="Enter Location  here..."-->			
 		</div>  
-		<button type="submit" class="btn btn-default" value="submit">Submit</button>
+		<button type="submit" class="btn btn-default" value="submit">Search</button>
 	</form>
       </div>
       <div class="modal-footer">

@@ -62,6 +62,7 @@
                   <td>{{u.userLoc}}</td>
                   <td>{{u.userBloodGroup}}</td>
 		  <td>{{u.time}}</td>
+		 <td><a href="{{u.userContact}}">{{u.userContact}}</a></td>
                 </tr>
 			{% endfor %}
                 
