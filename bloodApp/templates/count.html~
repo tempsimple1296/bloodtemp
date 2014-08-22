@@ -63,8 +63,10 @@
 			{% for c in groupCount %}
                 <td>{{c}}</td>
 	        	{% endfor %}
-                <td>{{majorbloodGroup}}</td>
-                
+                <!--{% for major in majorbloodGroup %}
+		<td>{{major}}</td>
+		{% endfor %}-->
+		<td>{{majorbloodGroup}}</td>                
               </tbody>
             </table>
           </div>

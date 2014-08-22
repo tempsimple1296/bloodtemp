@@ -7,7 +7,7 @@ from django.core.validators import RegexValidator
 class User(models.Model):	
 	userName = models.CharField(max_length=50)
 	userAge = models.IntegerField(default=18,max_length=2)
-	userLoc = models.CharField(max_length=50)	
+	userLoc = models.CharField(max_length=250)	
 	userBloodGroup = models.CharField(max_length=3,validators=[RegexValidator(r'^(A|B|AB|O|a|b|ab|o)[+-]$','Enter A Valid Human BloodGroup..!!!')])
 	time = models.DateTimeField('date published',default=timezone.now)
 	userContact = models.CharField(max_length=150,unique=True)

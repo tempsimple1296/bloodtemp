@@ -10,6 +10,9 @@ from django.shortcuts import redirect
 from urllib import * 
 from social_auth.middleware import SocialAuthExceptionMiddleware
 from social_auth.exceptions import AuthAlreadyAssociated
+
+
+from django.utils.datastructures import MultiValueDictKeyError
  
 class CustomSocialAuthExceptionMiddleware(SocialAuthExceptionMiddleware):
     def get_redirect_uri(self, request, exception):
@@ -28,6 +31,7 @@ def count(request):
 	if(request.POST):
 		print request
 		f=[]
+		index=0
 		blood=["blood"]
 		bloodGroup=['O+','O-','A+','A-','B+','B-','AB+','AB-']
 		#print request
@@ -36,12 +40,6 @@ def count(request):
 		for bg in bloodGroup: 
 			f.append(User.objects.filter(userLoc=loc).filter(userBloodGroup=bg).count())
 		_max=f[0]
-		index=0
-'''
-		print '#########################'
-		print 'f-->',f
-		print '#########################'
-'''
 		for i in xrange(0,len(f)):
 			if(f[i]==0):
 				if(i==len(f)-1):
@@ -53,16 +51,33 @@ def count(request):
 			if(f[i]>_max):
 				_max=f[i]
 				index=i
-
-		return render_to_response('count.html',{'groupCount':f,'major':_max,'majorbloodGroup':bloodGroup[index]})		
+		major=[]
+		major.append(index)
+		maximum = f[index]
+		for i in xrange(index+1,len(f)):
+			if(f[i]==maximum):
+				major.append(i)
+				
+		for i in xrange(0,len(major)):
+			major[i]=bloodGroup[major[i]]
+		
+		return render_to_response('count.html',{'groupCount':f,'major':_max,'majorbloodGroup':major})#bloodGroup[index]})		
 	return HttpResponse("Sorry the Page You Requested Does Not Exist...!!")	
 				
 def groups(req):
 	bloodGroup=""
 	loc=""
+	'''print "------------------------------------"
+	print req
+	print "------------------------------------"
+	'''
+	print req.POST
 	if(req.POST):
 		bloodGroup = req.POST['group']
-		loc=req.POST['loc']		
+		loc=req.POST['loc']
+		print "bloodGroup-->",bloodGroup
+		print "loc --> ",loc		
+		#loc=req.POST['input-pac']		
 		if((bloodGroup and loc)):
 			f=User.objects.filter(userBloodGroup=bloodGroup).filter(userLoc=loc)
 		elif(bloodGroup=="" and loc==""):
@@ -75,7 +90,8 @@ def groups(req):
 		
 		return render_to_response('result.html',{'users':f})		
 	else:
-    		return render_to_response('result.html')
+		print 'No req.post called...!!!!!'    		
+		return render_to_response('result.html')
 
 
 def listAll(request):

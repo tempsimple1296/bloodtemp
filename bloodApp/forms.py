@@ -15,7 +15,7 @@ MY_BLOOD_GROUP = (
 	('AB-','AB-'),
 )
 
-ALL_LOCATIONS = (
+'''ALL_LOCATIONS = (
 	('Andhra Pradesh','Andhra Pradesh'),
 	('Andaman and Nicobar Islands','Andaman and Nicobar Islands(UT)'),
 	('Arunachal Pradesh','Arunachal Pradesh'),
@@ -51,11 +51,11 @@ ALL_LOCATIONS = (
 	('Uttar Pradesh','Uttar Pradesh'),
 	('Uttarakhand','Uttarakhand'),
 	('West Bengal','West Bengal'),
-)
+)'''
 
 class RegisterationForm(ModelForm):
 	userBloodGroup=forms.ChoiceField(choices=MY_BLOOD_GROUP)
-	userLoc=forms.ChoiceField(choices=ALL_LOCATIONS)
+	#userLoc=forms.ChoiceField(choices=ALL_LOCATIONS)
 	class Meta:
 		model=User
 		#fields = 'userName','userAge','userBloodGroup','userLoc','time'
@@ -64,7 +64,8 @@ class RegisterationForm(ModelForm):
             		'userName': forms.TextInput(attrs={'class': 'form-control '}),
         		'userAge': forms.TextInput(attrs={'class': 'form-control'}),
 			'userBloodGroup': forms.TextInput(attrs={'class': 'form-control'}),
-			'userLoc': forms.TextInput(attrs={'class': 'form-control'}),
+			'userLoc': forms.TextInput(attrs={'id':'pac-input','class':'form-control'}),
+#'class': 'form-control'}),
 			'time': forms.TextInput(attrs={'type':'hidden'}),#{'class': 'form-control'}),#,'disabled':''}),
 			'userContact': forms.TextInput(attrs={'type':'hidden'}),			
 		}
