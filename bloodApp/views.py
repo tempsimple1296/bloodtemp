@@ -10,9 +10,6 @@ from django.shortcuts import redirect
 from urllib import * 
 from social_auth.middleware import SocialAuthExceptionMiddleware
 from social_auth.exceptions import AuthAlreadyAssociated
-
-
-from django.utils.datastructures import MultiValueDictKeyError
  
 class CustomSocialAuthExceptionMiddleware(SocialAuthExceptionMiddleware):
     def get_redirect_uri(self, request, exception):
@@ -27,6 +24,9 @@ def signin(request):
 '''def completeGoogleAuth(request):
 	return HttpResponse("You Have Successfully Authorized with Google")
 '''
+def amIEligible(request):
+	return render_to_response('whoCanDonate.html')
+
 def count(request):
 	if(request.POST):
 		print request
@@ -87,7 +87,8 @@ def groups(req):
 				f=User.objects.filter(userBloodGroup=bloodGroup)
 			else: 				 
 				f=User.objects.filter(userLoc=loc)
-		
+		if(not (f)):
+			return HttpResponse("No OneRegistered Yet ..!!!")
 		return render_to_response('result.html',{'users':f})		
 	else:
 		print 'No req.post called...!!!!!'    		
@@ -112,7 +113,7 @@ def profile(request):
 	return HttpResponse(request)
 
 def home(request):
-	return render_to_response('sexy.html')
+	return render_to_response('home.html')
 
 def fbRegister(request):
 	form={}
@@ -159,16 +160,8 @@ def register(request):
 			return render_to_response('error.html',context,context_instance=RequestContext(request))
 			
 	else:
-		'''print 'length',len(request.session.keys())
-		for item in request.session.keys():
-			print item,"-->",request.session.get(item)
-		'''
-		
-		#if(len(request.session.keys())==0):
 		if (not(request.session.keys())):			
 			return HttpResponseRedirect('/register')		
-	#if request.method=='GET':
-			
 		else:
 			#print "Provider--->"
 			#print request
@@ -200,7 +193,7 @@ def register(request):
 			print form.fields['userContact'].initial 	
 			#a=json.loads(instance.tokens)
 			#_id = user_social_auth.get(provider='facebook').uid
-		#	_id = UserSocialAuth.objects.filter(provider='facebook')
+			#_id = UserSocialAuth.objects.filter(provider='facebook')
 			#_id=UserSocialAuth.objects.all()
 			print '----------------------------------------'		
 			#pprint(instance.tokens)	

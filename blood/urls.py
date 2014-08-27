@@ -22,6 +22,7 @@ urlpatterns = [
     url('account-already-associated',views.CustomSocialAuthExceptionMiddleware),
     url(r'^account/error/',views.showError),
     url(r'^fbRegister',views.fbRegister),
+    url(r'^am-I-Eligible/$',views.amIEligible),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

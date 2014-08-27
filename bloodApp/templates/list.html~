@@ -176,12 +176,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <div class="modal-body">
          <form class="navbar-form navbar-right" action="/count/" method="post">
 		{% csrf_token %}
-		<div class="form-group">	
-			<select id="id_userLoc" name="loc">
+		<div class="form-group">
+			<input id="pac-input" class="form-control" type="text" placeholder="All Locations" name="loc">	
+			<!--<select id="id_userLoc" name="loc">
 			<option value="Punjab,Hoshiarpur">Hoshiarpur,Punjab</option>
 			<option value="Punjab,Jalandhar">Jalandhar,Punjab</option>
 			<option value="Punjab,Ludhiana">Ludhiana,Punjab</option>
-			<!--	<option value="Andhra Pradesh">Andhra Pradesh</option>
+				<option value="Andhra Pradesh">Andhra Pradesh</option>
 				<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
 				<option value="Arunachal Pradesh">Arunachal Pradesh</option>
 				<option value="Assam">Assam</option>
