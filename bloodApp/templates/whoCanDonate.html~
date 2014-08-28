@@ -124,7 +124,23 @@
           <li class="sign-up">
             <a class="btn btn-trans btn-solid btn-tiny" href="/listUsers">View Registered Entries</a>
           </li>
-      </ul><!-- /nav right -->
+<br><br>
+Follow Us On Social World
+<br>
+<ul class="social">
+        <li>
+          <a href="#" title="Facebook">
+            <span class="icon icon-social-facebook"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="Google Plus">
+            <span class="icon icon-social-googleplus"></span>
+          </a>
+        </li>
+        </ul>
+      </ul>
+	<!-- /nav right -->
     </nav><!-- /eight columns -->
   </div><!-- /row -->
 
@@ -133,7 +149,7 @@
         <div class="header-content smaller pricing-alt">
         <h2 class="nudge-left">
           <small>Spread Smile all over</small>
-          Sign up for BloodApp
+          <a href="/register">Sign up for BloodApp</a>
         </h2>
       </div>
 
@@ -262,136 +278,13 @@
       <strong>Will I get AIDS?</strong>
        Absolutely not! All equipments used to collect blood are sterile. These items are used once and discarded. Blood collections are performed by professionally trained blood bank personnel whose primary concern is your safety and the safety of the blood to be transfused. </p>
 <p class="faq-text">
-      <strong>I suffer from diabetes, Can I Still Donate Blood</strong>
+      <strong>I suffer from diabetes, Can I Still Donate Blood?</strong>
        Yes one can still donate blood if you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.</p>
     
   </div><!-- /six columns -->
 </div><!-- /row -->
 </div><!-- /secondary-content -->
 
-<div class="all-features">
-  <div class="row">
-    <div class="twelve columns">
-      <h2>Treehouse Features</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="four columns show-for-small">
-      <select data-ul-select-target data-featurette="nav-select"></select>
-    </div>
-    <div class="four columns hide-for-small">
-      <h4>Learning</h4>
-      <ul class="feature-list no-bullet" data-ul-select>
-        <li >
-          <a href="/features/tracks" >Tracks</a>
-        </li>
-        <li >
-          <a href="/features/library" >Library</a>
-        </li>
-        <li >
-          <a href="/features/forum" >Forum</a>
-        </li>
-        <li >
-          <a href="/features/workspaces" >Workspaces</a>
-        </li>
-        <li >
-          <a href="/features/video" >Video</a>
-        </li>
-        <li >
-          <a href="/features/stages" >Stages</a>
-        </li>
-        <li >
-          <a href="/features/code-challenges" >Code Challenges</a>
-        </li>
-        <li >
-          <a href="/features/quizzes" >Quizzes</a>
-        </li>
-        <li >
-          <a href="/features/conferences" >Conferences</a>
-        </li>
-        <li >
-          <a href="/features/bonus" >Bonus Lessons</a>
-        </li>
-        <li >
-          <a href="/features/live-workshops" >Live Workshops</a>
-        </li>
-        <li >
-          <a href="/features/ipad" >Native iPad App</a>
-        </li>
-      </ul>
-    </div>
-    <div class="four columns hide-for-small">
-      <h4>Topics</h4>
-      <ul class="feature-list no-bullet" data-ul-select>
-        <li >
-          <a href="/features/html" >HTML</a>
-        </li>
-        <li >
-          <a href="/features/css" >CSS</a>
-        </li>
-        <li >
-          <a href="/features/ruby" >Ruby</a>
-        </li>
-        <li >
-          <a href="/features/javascript" >JavaScript</a>
-        </li>
-        <li >
-          <a href="/features/php" >PHP</a>
-        </li>
-        <li >
-          <a href="/features/design" >Design</a>
-        </li>
-        <li >
-          <a href="/features/wordpress" >WordPress</a>
-        </li>
-        <li >
-          <a href="/features/ios" >iOS</a>
-        </li>
-        <li >
-          <a href="/features/android" >Android</a>
-        </li>
-        <li >
-          <a href="/features/development-tools" >Development Tools</a>
-        </li>
-        <li >
-          <a href="/features/business" >Business</a>
-        </li>
-      </ul>
-    </div>
-    <div class="four columns hide-for-small">
-      <h4>Achievements</h4>
-      <ul class="feature-list no-bullet" data-ul-select>
-        <li >
-          <a href="/features/points" >Points</a>
-        </li>
-        <li >
-          <a href="/features/reward-videos" >Reward Videos</a>
-        </li>
-        <li >
-          <a href="/features/badges" >Badges</a>
-        </li>
-      </ul>
-      <h4>Student Account</h4>
-      <ul class="feature-list no-bullet" data-ul-select>
-        <li >
-          <a href="/features/activity-feed" >Activity Feed</a>
-        </li>
-        <li >
-          <a href="/features/profile" >Profile</a>
-        </li>
-        <li >
-          <a href="/features/notifications" >Notifications</a>
-        </li>
-        <li >
-          <a href="/features/groups" >Groups</a>
-        </li>
-        <li >
-          <a href="/features/student-perks" >Student Perks</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 
 <script type="text/javascript">
@@ -417,31 +310,21 @@
     <div class="twelve columns">
       <img alt="Minimal footer logo" class="minimal-footer-logo" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/new-marketing/minimal-footer-logo-a210f0c71ee46d218f4cf00a5efb9cb6.svg" />
       <p>
-        &copy;2014 Treehouse Island, Inc.<br>
-        <a href="http://www.teamtreehouse.com/terms">Terms</a>, <a href="http://www.teamtreehouse.com/privacy">Privacy</a>, <a href="http://www.teamtreehouse.com/support">Contact</a>
+        &copy;BloodApp<br>
+        <a href="#">Terms and Condition</a><br>For Any Suggestions Or Queries Mail Us At : pmBloodApp@gmail.com
       </p>
       <ul class="social">
         <li>
-          <a href="http://twitter.com/treehouse" title="Twitter">
-            <span class="icon icon-social-twitter"></span>
-          </a>
-        </li>
-        <li>
-          <a href="http://facebook.com/teamtreehouse" title="Facebook">
+          <a href="#" title="Facebook">
             <span class="icon icon-social-facebook"></span>
           </a>
         </li>
         <li>
-          <a href="http://plus.google.com/110278003536476194286/posts" title="Google Plus">
+          <a href="#" title="Google Plus">
             <span class="icon icon-social-googleplus"></span>
           </a>
         </li>
-        <li>
-          <a href="http://linkedin.com/company/treehouse-island-inc-" title="LinkedIn">
-            <span class="icon icon-social-linkedin"></span>
-          </a>
-        </li>
-      </ul>
+        </ul>
     </div>
   </div>
 </div>
@@ -454,7 +337,7 @@
 
 
  <!-- yields content from within treehouse-tour paths. Find helper in application.helper -->
-
+<!--
   <div class="modal" data-featurette="modal" id="login-modal" style="; display: none;">
     <div  class="row" >
       <div  class="five columns centered" >
@@ -615,7 +498,7 @@
     }());
   </script>
 
-
+-->
 </body>
 </html>
 

@@ -105,6 +105,11 @@ def listAll(request):
     	return HttpResponse(template.render(data))
 #	return HttpResponse(render(request, "blog/index.html", {'articles':[article]}))
 	
+
+def termsAndCondition(request):
+	return render_to_response('termsAndCondition.html')
+
+
 def BloodGroupOrdered(request,group):#,BloodGroup):
 	print group
 	return HttpResponse('Hehehe got you now..!!!')#render_to_response('bloodgroup.html')

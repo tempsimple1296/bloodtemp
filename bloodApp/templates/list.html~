@@ -177,7 +177,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
          <form class="navbar-form navbar-right" action="/count/" method="post">
 		{% csrf_token %}
 		<div class="form-group">
-			<input id="pac-input" class="form-control" type="text" placeholder="All Locations" name="loc">	
+			<input id="pac-input-1" class="form-control" type="text" placeholder="All Locations" name="loc">	
 			<!--<select id="id_userLoc" name="loc">
 			<option value="Punjab,Hoshiarpur">Hoshiarpur,Punjab</option>
 			<option value="Punjab,Jalandhar">Jalandhar,Punjab</option>

@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^account/error/',views.showError),
     url(r'^fbRegister',views.fbRegister),
     url(r'^am-I-Eligible/$',views.amIEligible),
+    url(r'^termsAndCondition/$',views.termsAndCondition),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
