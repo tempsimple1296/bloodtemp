@@ -105,6 +105,11 @@ def listAll(request):
     	return HttpResponse(template.render(data))
 #	return HttpResponse(render(request, "blog/index.html", {'articles':[article]}))
 	
+def whyBloodApp(request):
+	return render_to_response('whyBloodApp.html')
+
+def FAQ(request):
+	return render_to_response('FAQ.html')
 
 def termsAndCondition(request):
 	return render_to_response('termsAndCondition.html')

@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^fbRegister',views.fbRegister),
     url(r'^am-I-Eligible/$',views.amIEligible),
     url(r'^termsAndCondition/$',views.termsAndCondition),
+    url(r'^FAQ/$',views.FAQ),
+    url(r'^whyBloodApp',views.whyBloodApp),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

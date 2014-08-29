@@ -47,7 +47,13 @@
         <p class="lead">Pre-Requistes for Blood Donation In India</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Get Yourself Registered today</a></p>
       </div>
-
+<div class="row quotes">
+<div class="eight columns">
+      <blockquote class="quote-text">India faces a whopping <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">blood deficit </a>of approximately 30-35 per cent annually. The country needs around eight to 10 million units of blood every year but manages a measly 5.5 million units.</blockquote>
+      <img alt="Graham Davidson" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_graham_davidson-d6016911050b538f7060382a90d3fc5e.jpg" />
+      <p class="quote-author"><strong>Message From Developer</strong></p>
+    </div>
+</div>
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-10">
@@ -102,7 +108,7 @@ The donor shall be in the age group of 18 to 60 years.
       </div>
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2014</p>
+        <p>&copy; BloodApp</p>
       </div>
 
     </div> <!-- /container -->
