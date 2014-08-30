@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="marketing-layout subscriptions-controller plans-action ff "   >
   <head>
-    <title>Am I Eligible</title>
+    <title>Terms And Condition</title>
     <meta charset="UTF-8" />
       <!--<meta name="description" content="Join Treehouse today. Sign up in minutes. Choose from our basic, pro, and group plans. Satisfaction guaranteed." />-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -144,148 +144,71 @@ Follow Us On Social World
     </nav><!-- /eight columns -->
   </div><!-- /row -->
 
-    <div class="row main-heading">
-    <div class="twelve columns">
-        <div class="header-content smaller pricing-alt">
-        <h2 class="nudge-left">
-          <small>Spread Smile all over</small>
-          <a href="/register">Sign up for BloodApp</a>
-        </h2>
-      </div>
-
-      <!-- Discount callout -->
-    </div><!-- /twelve columns -->
-  </div><!-- /row main-heading -->
-
-</header><!-- /header -->
-
-
-
-</div><!-- /header -->
-
-<!-- Plans -->
-
-  
-<div class="section plans-content overlap" style="margin-left:150px;">
-
-    <div class="six columns">
-      <div class="plan-panel gold-plan">
-        <div class="plan-meta-gold">
-          <h3>Why To Join BoodApp ?</h3>
-          <span class="plans-panel-price">Free</span>
-        </div>
-        <ul class="plan-bullets">
-          <li><span>A Decision To Donate Your Blood Can Save A Life</span></li>
-         <li><span>There Is A Constant Need For Regular Blood Supply Because Blood Can Be Stored For Only A Limited Time Before Use</span></li>
-          <li><span>Your 20 mins of Blood Donation Can Give SomeOne A Life-Time</span></li>
-        </ul>
-        <div class="plan-cta">
-          <a class="btn btn-primary btn-large btn-raised" href="/register">Sign Up</a>
-            <span class="trial-flag">Feel Free To Help</span>
-          </li>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="row">
-    <div class="twelve columns">
-        <p style="margin-bottom: 0;">For Suggestions And Reviews Contact Us At : pmBloodApp@gmail.com</p>
-      <p class="contact-alternate">For Any Queries Mail Us At : pmBloodApp@gmail.com</p>
-    </div>
-  </div>
+</header>
+	</div>
 </div>
 
-  <div id="planQuotes">
-  <div class="row text-centered">
-    <h3>Problems For Which BloodApp is Made..!!!</h3>
-  </div>
-  <div class="row quotes">
-<div class="eight columns">
-      <blockquote class="quote-text">India faces a whopping <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">blood deficit </a>of approximately 30-35 per cent annually. The country needs around eight to 10 million units of blood every year but manages a measly 5.5 million units.</blockquote>
-      <img alt="Graham Davidson" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_graham_davidson-d6016911050b538f7060382a90d3fc5e.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    <div class="four columns">
-      <blockquote class="quote-text"><h5>See ZeeNewsIndia Report For Verification.<h5>
-<a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">Click Here</a></blockquote>
-      <img alt="Jon Farrell" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_jon_farrell-ae7ee501b021d234aee2c545d2033536.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    
-  </div>
-  <div class="row quotes">
-    <div class="eight columns">
-      <blockquote class="quote-text">In India only 6 per cent of women in India donated blood is also a reflection on the state of the health of our women, most of them facing under nourishment and other typical health problems aggravated due to gender discrimination and vulnerability. “It is not at all genuine that Indian women are not coming up to donate blood; the percentage is low as they are deferred due to physiological problems. Most of them have low hemoglobin count and fail to meet the minimum requirements to donate blood and hence the percent count is low</blockquote>
-      <img alt="Martha Chumo" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_martha_chumo-817f93971f5a1b72ce18a33d0360d885.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    <div class="four columns">
-      <blockquote class="quote-text"><h5>See ZeeNewsIndia Report For Verification.<h5>
-<a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">Click Here</a></blockquote>
-      <img alt="Jon Farrell" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_jon_farrell-ae7ee501b021d234aee2c545d2033536.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    
-</div>
-<div class="row quotes">
-    <div class="eight columns">
-      <blockquote class="quote-text">According to a 2012 World Health Organisation (WHO) report, only nine million units are collected annually, while the need is for 12 million units.</blockquote>
-      <img alt="Martha Chumo" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_martha_chumo-817f93971f5a1b72ce18a33d0360d885.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    <div class="four columns">
-      <blockquote class="quote-text"><h5>See TimesOfIndia Report For Verification.<h5>
-<a href="http://timesofindia.indiatimes.com/life-style/health-fitness/health/India-facing-a-blood-shortage-of-3-million-units/articleshow/36492006.cms">Click Here</a></blockquote>
-      <img alt="Jon Farrell" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_jon_farrell-ae7ee501b021d234aee2c545d2033536.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    
-</div>
-
-</div><!-- /plans-content -->
+  <!-- /plans-content -->
 
 <div class="section secondary-content faq-header">
   <div class="row">
   <div class="twelve columns">
-    <h3 class="text-centered">Frequently Asked Questions</h3>
+    <h3 class="text-centered">Terms And Conditions</h3>
   </div>
 </div>
 <div class="row">
-  <div class="six columns">
-    <p class="faq-text">
-      <strong> Is there any danger in donating blood?</strong>
-      There is virtually no danger. Only sterile and disposable needles are used to collect blood.  There is absolutely no chance of catching any infectious disease by donating blood.</p>
-    <p class="faq-text">
-      <strong>How often can I donate blood?</strong>
-       It is safe to donate blood once in every three months.</p>
-    <p class="faq-text">
-      <strong>Why do I have to wait for three months before donating again?</strong>
-      Since blood contains iron (which is essential for making new red blood cells), donating blood more often than every 3 months causes the body to lose iron faster than it can be made up from iron-containing foods in our diet. As a result the donor could develop iron deficiency anemia, causing him/her to feel weak and tired.</p>
-    <p class="faq-text">
-      <strong>What if I faint?</strong>
-       The likelihood of this happening is minimal. You should eat before donating and drink extra fluids, especially after your donation.</p>
-  </div>
-  <div class="six columns">
-    <p class="faq-text">
-      <strong>Will it hurt?</strong>
-       Giving blood is not painful. You may feel a pinch in the beginning lasting only a couple of seconds. </p>
-    <p class="faq-text">
-      <strong>Will I become weak if I donate frequently?</strong>
-       No. It is perfectly healthy to donate blood once in every 3 months for an individual.</p>
-    <p class="faq-text">
-      <strong>Will I get AIDS?</strong>
-       Absolutely not! All equipments used to collect blood are sterile. These items are used once and discarded. Blood collections are performed by professionally trained blood bank personnel whose primary concern is your safety and the safety of the blood to be transfused. </p>
-<p class="faq-text">
-      <strong>I suffer from diabetes, Can I Still Donate Blood?</strong>
-       Yes one can still donate blood if you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.</p>
-    
-  </div><!-- /six columns -->
-</div><!-- /row -->
-</div><!-- /secondary-content -->
+  <div class="eight columns "style="margin-left:180px;">
+    <p class="faq-text" >
+      <strong>Data Which BloodApp Show Publically</strong>
+	1)Name <strong>(As per Entered By You At Time of Registeration)</strong>
+	<br>2)Age <strong>(As per Entered By You At Time of Registeration)</strong>
+	<br>3)Location<strong>(As per Entered By You At Time of Registeration)</strong>
+	<br>4)Blood Group<strong>(As per Entered By You At Time of Registeration)</strong>
+	<br>5)Registered On<strong>(Automatic TimeStamp Recorded At Time Of Regsitration)</strong>
+	<br>6)Contact<strong>(If Connected With Facebook Then Facebook Profile Link Else Google+ Profile Link)</strong></p>
 
+   </div>
+</div>
 
+<div class="row">
+	<div class="eight columns" style="margin-left:180px;">
+		<p class="faq-text">
+			<strong>
+				BloodApp Does Not Guarentee that the Donor is Correct About his/her Blood Group , So It is Adviced To Acceptor Always Have A Person's Medical Check-Up Before Blood Donation Process.  			
+			</strong></p>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="eight columns" style="margin-left:180px;">
+		<p class="faq-text">
+			<strong>
+				BloodApp is Not Made in The Favour Of PAID DONORS. The Donors Here Registered Are Free Donors. If Some Donor demands Money After Donation , it's of NO CONCERN WITH BLOODAPP So a Acceptor must ask the donor about the same before donation.
+			</strong></p>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="eight columns" style="margin-left:180px;">
+		<p class="faq-text">
+			<strong>
+				BloodApp Advice To Acceptor But Not An Instruction :
+<br>If Acceptor Thinks That the Person Is Fake by Looking On Profile(either Facebook Profile OR Google+ Profile) of Regsitered Donor , then Acceptor Must Not Take The Risk To Contact as it can be time waste And Should Choose The Next Registered Donor In The List.			
+			</strong></p>
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="eight columns" style="margin-left:180px;">
+		<p class="faq-text">
+			<strong>
+				If you Click On "Register With Facebook Button" OR "Register With Google", it simply means that You Have Carefully Read all the points mentioned above and also Who Is Eligible To Donate Blood(<a href="/am-I-Eligible">Click Here To Know Who Is Eligible</a>) and You Have No Problem From BloodApp Sharing Your Public Information As Mentioned Above.  	
+			</strong></p>
+	</div>
+</div>
 
 <script type="text/javascript">
   /* <![CDATA[ */
@@ -336,169 +259,6 @@ Follow Us On Social World
 </div><!-- /footer -->
 
 
- <!-- yields content from within treehouse-tour paths. Find helper in application.helper -->
-<!--
-  <div class="modal" data-featurette="modal" id="login-modal" style="; display: none;">
-    <div  class="row" >
-      <div  class="five columns centered" >
-        <section class="contained">
-          
-            <h1>Sign in</h1>
-            <a class="close-modal modal-close"><span class="icon icon-close"></span></a>
-          
-          <form accept-charset="UTF-8" action="https://teamtreehouse.com/person_session" class="new_user_session" id="new_user_session" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WJxsHY/gfg/yzokpDazNoCsinq579zaKU0llNm0WlPU=" /></div>
-          <input id="return_to" name="return_to" type="hidden" value="/home" />
-          <fieldset>
-            <div class="form-item">
-            <label for="user_session_email">Email Address</label>
-            <input autofocus="autofocus" id="user_session_email" name="user_session[email]" type="email" />
-</div>          </fieldset>
-          <fieldset>
-            <div class="form-item">
-            <label for="user_session_password">Password</label>
-            <input id="user_session_password" name="user_session[password]" type="password" />
-</div>          </fieldset>
-          <p class="forgot-password"><a href="/password_resets"><span class="icon icon-help-mini"></span>I forgot my password</a></p>
-          <button type="submit" class="btn btn-secondary btn-raised btn-small">Sign in</button>
-</form>        </section>
-      </div>
-    </div>
-</div><div class="modal" data-featurette="help-modal" id="contact-form-modal" style="; display: none;">
-      <div class="row">
-      <div class="nine columns centered">
-        <div class="contained featurette" data-featurette="help-form" id="help-form">
-          <div class="row">
-            <section class="twelve columns secondary-heading">
-              <h1>Contact Support</h1>
-                <a class="close-modal modal-close"><span class="icon icon-close"></span></a>
-            </section>
-          </div>
-          <div class="row">
-            <div class="eight columns">
-              <div class="message waiting">
-                <span class="loading-spinner loading-spinner-large"><span></span></span>
-              </div>
-
-              <div class="message success">
-                <p><strong>Thanks!</strong> We'll be in touch.</p>
-              </div>
-
-              <form accept-charset="UTF-8" action="/contact" class="new_contact_form" id="contact-form" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Pe0F5aQGb+sXu9Xc4DarQXNDkWMNsFkjtw7CTp4Mzpg=" /></div>
-
-                <div class="message error">
-                  <p>There was a small problem sending your message.</p>
-                </div>
-
-                <div class="form-item">
-                  <label for="contact_form_name">Name <span>*</span></label>
-                  <input id="contact_form_name" name="contact_form[name]" type="text" />
-                  <div class="error-message"></div>
-                </div>
-
-                <div class="form-item">
-                  <label for="contact_form_email">Email <span>*</span></label>
-                  <input id="contact_form_email" name="contact_form[email]" type="text" />
-                  <div class="error-message"></div>
-                </div>
-
-                <fieldset class="honey-pot-field">
-                  <div class="form-item">
-                    <label for="contact_form_email_confirmation">Email Confirmation <span>*</span></label>
-                    <input id="contact_form_email_confirmation" name="contact_form[email_confirmation]" type="text" value="" />
-                    <div class="error-message"></div>
-                  </div>
-                </fieldset>
-
-                <div class="form-item">
-                  <label for="contact_form_message">Message <span>*</span></label>
-                  <textarea class="form-element" id="contact_form_message" name="contact_form[message]" rows="2">
-</textarea>
-                  <div class="error-message"></div>
-                </div>
-
-                <button class="btn btn-primary btn-raised btn-small" type="submit">Send Message</button>
-</form>            </div>
-
-            <div class="four columns">
-              <div class="module secondary-module  contact-alternative">
-                <p>You can also email support requests to:</p>
-                <p><a href="mailto:help@teamtreehouse.com">help<span>@</span>teamtreehouse.com</a></p>
-              </div>
-
-              <div class="module secondary-module contact-alternative">
-                <div class="secondary-heading">
-                  <h3>Content questions?</h3>
-                </div>
-                <span class="icon icon-forum"></span>
-                <p>Don't forget you can start a discussion in the <a href="/forum">Forum</a>. Treehouse teachers and members are actively discussing topics from course material and other general teaching topics.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-</div>
-
-<div id="mini-profile-container"></div>
-<div id="tarp" class="modal-tarp" style="display: none;" data-featurette="tarp"></div>
-
-
-<script src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/logged_out-650f6932ccc0bdb6ebec4e55441bf4b7.js"></script>
-
-
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 1017883234;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-  </script>
-  <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-  </script>
-  <noscript>
-    <div style="display:inline;">
-      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017883234/?value=0&amp;guid=ON&amp;script=0"/>
-    </div>
-  </noscript>
-
-  <script type="text/javascript">
-    mixpanel.register({visitor_id: 726541002});
-
-    //  ensure we only send this once per day
-    if ($.cookie("mpVisited") === undefined) {
-        mixpanel.track("Visited Site", {path: "/subscribe/plans?trial=yes"},
-          function() { $.cookie("mpVisited", "true", {expires: 1}); });
-        mixpanel.people.increment('daily_visits');
-    }
-
-        mixpanel.track("Viewed Plans", {"free_trial":true});
-  </script>
-
-  <script>(function() { var _fbq = window._fbq || (window._fbq = []); if (!_fbq.loaded) { var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true; } _fbq.push(['addPixelId', "688952224481965"]); })(); window._fbq = window._fbq || []; window._fbq.push(["track", "PixelInitialized", {}]); </script> <noscript><img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=688952224481965&amp;ev=NoScript" /></noscript>
-
-
-  <script type="text/javascript">
-    adroll_adv_id = "KIZYNJXKQFHZRL33ET4IIJ";
-    adroll_pix_id = "5SMHKC6AK5D3DJAZBGP4PX";
-
-
-    (function () {
-    var oldonload = window.onload;
-    window.onload = function(){
-      __adroll_loaded=true;
-      var scr = document.createElement("script");
-      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-      scr.setAttribute('async', 'true');
-      scr.type = "text/javascript";
-      scr.src = host + "/j/roundtrip.js";
-      ((document.getElementsByTagName('head') || [null])[0] ||
-      document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-      if(oldonload){oldonload()}};
-    }());
-  </script>
-
--->
 </body>
 </html>
 

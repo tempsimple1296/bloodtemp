@@ -42,19 +42,20 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Prateek</h3>
+              <h3 class="masthead-brand">BloodApp</h3>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="/home">Home</a></li>
                 <li><a href="#">Features</a></li>
 		<li><a href="/listUsers">ListAll</a></li>
 		<li><a href="/am-I-Eligible">Am I Eligible</a></li>
 		<li><a href="/FAQ">FAQ</a></li>
+		<li><a href="/whyBloodApp">Why BloodApp Made?</a></li>
               </ul>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">Welcome..!!!</h1>
+            <h1 class="cover-heading">Bleed Red..!!!</h1>
             <p class="lead">Help Others By Donating Blood</p>
             <p class="lead">
               <a href="/register" class="btn btn-lg btn-default">Register</a>

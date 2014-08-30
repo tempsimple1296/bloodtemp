@@ -9,10 +9,12 @@
 	<div class="jumbotron">
 	<h1>Register For Blood App</h1>
         <p class="lead">Just By Donating Blood , You Can Save Someone's Life...</p>
-      </div>
+<p class="lead"><strong>By Clicking on "Register With Facebook" OR "Register With Google+" ,You Accept All Terms And Conditions Mentioned By BloodApp(<a href="/termsAndCondition" >Click Here To See Terms And Conditions </a>)</strong></p>
+            
+	</div>
     <div id="example" class="container">
-	<a href="{% url 'socialauth_begin' 'facebook' %}" class="btn btn-primary btn-lg btn-block" role="button" style="width:340px;margin-left:370px;margin-top:70px">Register Using Facebook Account</a>	
-	<p><a href="{% url 'socialauth_begin' 'google-oauth2' %}" class="btn btn-primary btn-lg btn-block" style="width:340px;margin-left:370px;margin-top:30px">Register Using Google Account</a></p>
+	<a href="{% url 'socialauth_begin' 'facebook' %}" class="btn btn-primary btn-lg btn-block" role="button" style="width:340px;margin-left:370px;margin-top:70px">Register With Facebook</a>	
+	<p><a href="{% url 'socialauth_begin' 'google-oauth2' %}" class="btn btn-primary btn-lg btn-block" style="width:340px;margin-left:370px;margin-top:30px">Register With Google+</a></p>
 	</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="{% static 'js/bootstrap.min.js'%}"></script>

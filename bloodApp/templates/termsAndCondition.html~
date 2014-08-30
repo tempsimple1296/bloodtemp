@@ -47,13 +47,7 @@
         <p class="lead">Pre-Requistes for Blood Donation In India</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Get Yourself Registered today</a></p>
       </div>
-<div class="row quotes">
-<div class="eight columns">
-      <blockquote class="quote-text">India faces a whopping <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">blood deficit </a>of approximately 30-35 per cent annually. The country needs around eight to 10 million units of blood every year but manages a measly 5.5 million units.</blockquote>
-      <img alt="Graham Davidson" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_graham_davidson-d6016911050b538f7060382a90d3fc5e.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-</div>
+
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-10">
@@ -85,6 +79,36 @@ The donor shall be in the age group of 18 to 60 years.
           <p>Abortions – 6 months <br>History of Blood transfusion – 6 months <br>Surgery – 12 months <br>Typhoid – 12 months after recovery <br>History of Malaria and duly treated – 3 months (endemic) and 3 years (non endemic area) <br>Tattoo – 6 months <br>Breast feeding – 12 months after delivery <br>Immunization (Cholera, Typhoid, Diphtheria, Tetanus, Plague, Gammaglobulin) – 15 days <br>Rabies vaccination – 1 year after vaccination <br>History of Hepatitis in family or close contact – 12 months</p>
         </div>
       </div>
+<div class="container">
+      <div class="page-header">
+        <h2>Who Are Eligible To Donate Blood</h2>
+      </div>
+<div class="page-header">
+      <p><h5>Any donor, who is healthy, fit and not suffering from any transmittable diseases can donate blood.</h5></p>
+       </div>
+
+      <div class="page-header">
+      <p><h4>Donor must be 18 -60 years age and having a minimum weight of 50Kg can donate blood.</h4></p>
+       </div>
+<div class="page-header">      
+<p><h4>Donor’s Hemoglobin level is 12.5% minimum.</h4></p>
+       </div>
+<div class="page-header">
+      <p><h4>A donor can again donate blood after 3 months of your last donation of blood</h4></p>
+       </div>
+<div class="page-header">
+      <p><h4>Pulse rate must be between 50 to 100mm without any irregularities.</h4></p>
+       </div>
+<div class="page-header">
+      <p><h4>BP Diastolic 50 to 100 mm Hg and Systolic 100 to 180 mm Hg.</h4></p>
+       </div>
+<div class="page-header">
+      <p><h4>Body temperature should be normal and oral temperature should not exceed 37.5 degree Celsius.</h4></p>
+       </div>
+
+<div class="page-header">
+      <p><h4>The donor shall be free from any disease transmissible by blood transfusion.</h4></p>
+       </div>    
 <div class="row">
         <div class="col-lg-10">
           <h2>No person shall donate blood and no brood bank shall draw blood from a person, suffering from any of the diseases mentioned as follows</h2>

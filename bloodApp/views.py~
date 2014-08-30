@@ -25,7 +25,7 @@ def signin(request):
 	return HttpResponse("You Have Successfully Authorized with Google")
 '''
 def amIEligible(request):
-	return render_to_response('whoCanDonate.html')
+	return render_to_response('whoCanDonate.html')	
 
 def count(request):
 	if(request.POST):
