@@ -61,25 +61,9 @@
 	<font style="color:green;margin-top:20px"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errors in Registeration Form of BloodApp</h1></font>
 </div>
 <div style="margin-top:50px">	
-	{% for i in form %}
-		{% if i == "userLoc"%}
-		<div class="alert alert-danger"	style="margin-right:700px;margin-left:100px">
-			<h3>The Location Field is Required</h3>
-		</div>	
-		{% elif i == "userContact"%}
-		<div class="alert alert-danger"	style="margin-right:700px;margin-left:100px">
-			<h3>The Contact is Already in Use !!!</h3>
-		</div>	
-	{% elif i == "userAge"%}
-		<div class="alert alert-danger"	style="margin-right:700px;margin-left:100px">
-			<h3>The Age Must be Greater Than 17 and less than 61!!!</h3>
-		</div>	
-	{% elif i == "userName"%}
-		<div class="alert alert-danger"	style="margin-right:700px;margin-left:100px">
-			<h3>The Name Field Is Required!!!</h3>
-		</div>			
-		{% endif %}
-	{% endfor %}
+	<div class="alert alert-danger"	style="margin-right:700px;margin-left:100px">
+			<h3>Sorry it Seems Like You Have'nt Joined Google+ Profile So Kindly First Join it And Then Register...</h3>
+	</div>	
 </div>
 <div style="margin-top:50px;margin-left:100px">
 	<a href="/register"><h3>Click Here To Register Again </h3></a>

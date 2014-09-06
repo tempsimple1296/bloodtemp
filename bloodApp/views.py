@@ -19,6 +19,10 @@ class CustomSocialAuthExceptionMiddleware(SocialAuthExceptionMiddleware):
             return super(CustomSocialAuthExceptionMiddleware, self)\
                                  .get_redirect_uri(request, exception)
 def signin(request):
+	if ((request.session.keys())):			
+		return HttpResponseRedirect('/registerUser')	
+	print 'sign in'
+	print request.session
 	return render_to_response('signin.html')
 	
 '''def completeGoogleAuth(request):
@@ -106,13 +110,13 @@ def listAll(request):
 #	return HttpResponse(render(request, "blog/index.html", {'articles':[article]}))
 	
 def whyBloodApp(request):
-	return render_to_response('whyBloodApp.html')
+	return render_to_response('whyBloodAppNew.html')
 
 def FAQ(request):
-	return render_to_response('FAQ.html')
+	return render_to_response('FAQNew.html')
 
 def termsAndCondition(request):
-	return render_to_response('termsAndCondition.html')
+	return render_to_response('termsAndConditionNew.html')
 
 
 def BloodGroupOrdered(request,group):#,BloodGroup):
@@ -146,7 +150,7 @@ def register(request):
 		form = RegisterationForm(request.POST)
 		print form		
 		#form.fields['userContact'].initial = json_data["link"]
-#		print form
+        #print form
 		if form.is_valid():		
 			'''print form.cleaned_data['userName']			
 			print form.cleaned_data['userAge']			
@@ -155,7 +159,7 @@ def register(request):
 			print form.cleaned_data['userLoc']			
 			print form.cleaned_data['time']			
 			'''	
-			if(int(form.cleaned_data['userAge'])<18):
+			if(((int(form.cleaned_data['userAge'])<18))and(int(form.cleaned_data['userAge'])>60)):
 				context = {'age_error':''}
 				return render_to_response('age_error.html',context,context_instance=RequestContext(request))	
 			entry = form.save()
@@ -183,23 +187,33 @@ def register(request):
 			print '##############################'
 			print 'session'
 			lists=request.session.keys()
-			for item in lists:
-				print item,"-->",request.session.get(item)
+			#print lists 
+            		
+                
+			#for item in lists:
+			#	print item,"-->",request.session.get(item)
 			#if(provider=='facebook')
 			#id_index = UserSocialAuth.objects.filter(provider='facebook').count()
 			instance = UserSocialAuth.objects.filter(provider=request.session.get('social_auth_last_login_backend')).get(user_id=request.session.get('_auth_user_id'))
 #id_index)	
 			#json parsing	
+			
 			a = json.dumps(instance.tokens)
 			token = json.loads(a)["access_token"]
 			print "token --> ",token
 			if(provider == "google-oauth2"):
-				data=urlopen("https://www.googleapis.com/oauth2/v1/userinfo?access_token="+token).read()			
+				data=urlopen("https://www.googleapis.com/oauth2/v1/userinfo?access_token="+token).read()				
 			elif(provider == "facebook"):
 				data=urlopen("https://graph.facebook.com/me?access_token="+token).read()
-			json_data = json.loads(data)
+            		json_data = json.loads(data)
+			print 'JSON_DATA',json_data			
+			if(not('link' in json_data)):
+                		request.session.flush()
+                		#return HttpResponse("<h1>Sorry it Seems Like You Have'nt Joined Google+ Profile So Kindly First Join it And Then Register...</h1>")		
+				return render_to_response('noGooglePlus.html')	
 			form.fields['userName'].initial = json_data["name"]
-			form.fields['userContact'].initial = json_data["link"] 	
+			form.fields['userContact'].initial = json_data["link"]
+			print data 	
 			print form.fields['userContact'].initial 	
 			#a=json.loads(instance.tokens)
 			#_id = user_social_auth.get(provider='facebook').uid
@@ -219,4 +233,7 @@ def index(request):
 def group_blood(request, bloodgroup):
 	user_list = User.objects.filter(userBloodGroup=bloodgroup)
 	return render_to_response('list.html',{'users':user_list})
+
+def features(request):
+	return render_to_response('')
 

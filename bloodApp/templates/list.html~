@@ -9,53 +9,7 @@
     <link rel="icon" href="../../favicon.ico">
 
     
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
-
-    <script>
-function initialize() {
-var options = {
-  types: ['(cities)'],
-  componentRestrictions: {country: 'in'}
-};
-  var input = (document.getElementById("pac-input"));
-
-  var types = document.getElementById('type-selector');
- 
- var autocomplete = new google.maps.places.Autocomplete(input,options);
-  autocomplete.bindTo('bounds', map);
-
-  var infowindow = new google.maps.InfoWindow();
-  var marker = new google.maps.Marker({
-    map: map,
-    anchorPoint: new google.maps.Point(0, -29)
-  });
-
-  google.maps.event.addListener(autocomplete, 'place_changed', function() {
-    infowindow.close();
-    marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    if (!place.geometry) {
-      return;
-    }
-
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    document.write(place.name);
-    infowindow.open(map, marker);
-  });
-
-  function setupClickListener(id, types) {
-    var radioButton = document.getElementById(id);
-    google.maps.event.addDomListener(radioButton, 'click', function() {
-      autocomplete.setTypes(types);
-    });
-  }
-
-  setupClickListener('changetype-all', []);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
+  
 
     <title>All USERS</title>
 
@@ -83,8 +37,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Home</a></li>
             <li><a href="/register">Register</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="/am-I-Eligible">Am I Eligible</a></li>
           </ul>
           <!--form class="navbar-form navbar-right">
             
@@ -92,47 +46,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <form class="navbar-form navbar-right" action="/group/" method="post">
 		{% csrf_token %}
 		<div class="form-group">
-			<input id="pac-input" class="form-control" type="text" placeholder="All Locations" name="loc">	      
-			<!--input type="text" class="form-control" id="loc" name="loc" placeholder="Enter Location here..."-->	
-		<!--<select id="id_userLoc" name="loc">
-			<option value="">All Locations</option>
-			<option value="Andhra Pradesh">Andhra Pradesh</option>
-			<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
-			<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-			<option value="Assam">Assam</option>
-			<option value="Bihar">Bihar</option>
-			<option value="Chandigarh">Chandigarh (UT)</option>
-			<option value="Chhattisgarh">Chhattisgarh</option>
-			<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
-			<option value="Daman and Diu ">Daman and Diu (UT)</option>
-			<option value="Delhi">Delhi (UT)</option>
-			<option value="Goa">Goa</option>
-			<option value="Gujarat">Gujrat</option>
-			<option value="Haryana">Haryana</option>
-			<option value="Himachal Pradesh">Himachal Pradesh</option>
-			<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-			<option value="Jharkhand">Jharkhand</option>
-			<option value="Karnataka">Karnataka</option>
-			<option value="Kerala">Kerala</option>
-			<option value="Lakshadweep">Lakshadweep (UT)</option>
-			<option value="Madhya Pradesh">Madhya Pradesh</option>
-			<option value="Maharashtra">Maharashtra</option>
-			<option value="Manipur">Manipur</option>
-			<option value="Meghalya">Meghalya</option>
-			<option value="Mizoram">Mizoram</option>
-			<option value="Nagaland">Nagaland</option>
-			<option value="Odisha">Odisha</option>
-			<option value="Pondicherry">Pondicherry (UT)</option>
-			<option value="Punjab">Punjab</option>
-			<option value="Rajasthan">Rajasthan</option>
-			<option value="Sikkim">Sikkim</option>
-			<option value="Tanil Nadu">Tamil Nadu</option>
-			<option value="Tripura">Tripura</option>
-			<option value="Uttar Pradesh">Uttar Pradesh</option>
-			<option value="Uttarakhand">Uttarakhand</option>
-			<option value="West Bengal">West Bengal</option>
-		</select-->      		
-		<!--<input type="text" class="form-control" id="bd" name="group" bloodGroup placeholder="Search For Blood Group...">-->
+			<input id="pac-input" class="form-control" type="text" placeholder="All Locations" name="loc" onfocus="initialize('pac-input')">	      
+			
 		<select id="bd" class="form-control" name="group">
 			<option value="">All BloodGroups</option>			
 			<option value="O+">O+</option>
@@ -161,77 +76,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 			<br>Hence it can also give us the idea that if quantity of some blood Group in a location is getting less so according to majority<br>(of BloodGroup) ,one can decide where to organise blood Donation Camps. 
 		</p>
 	</p>
-	<p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-left:400px;margin-top:20px"></p>
-	  	<h4>SEE LOCATION WISE RESULT</h4>
-	</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Search Location Wise</h4>
-      </div>
-      <div class="modal-body">
-         <form class="navbar-form navbar-right" action="/count/" method="post">
+	<form action="/count/" method="post">
 		{% csrf_token %}
-		<div class="form-group">
-			<input id="pac-input-1" class="form-control" type="text" placeholder="All Locations" name="loc">	
-			<!--<select id="id_userLoc" name="loc">
-			<option value="Punjab,Hoshiarpur">Hoshiarpur,Punjab</option>
-			<option value="Punjab,Jalandhar">Jalandhar,Punjab</option>
-			<option value="Punjab,Ludhiana">Ludhiana,Punjab</option>
-				<option value="Andhra Pradesh">Andhra Pradesh</option>
-				<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands(UT)</option>
-				<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-				<option value="Assam">Assam</option>
-				<option value="Bihar">Bihar</option>
-				<option value="Chandigarh">Chandigarh (UT)</option>
-				<option value="Chhattisgarh">Chhattisgarh</option>
-				<option value="Dadra and Nagar Haveli ">Dadra and Nagar Haveli (UT)</option>
-				<option value="Daman and Diu ">Daman and Diu (UT)</option>
-				<option value="Delhi">Delhi (UT)</option>
-				<option value="Goa">Goa</option>
-				<option value="Gujarat">Gujrat</option>
-				<option value="Haryana">Haryana</option>
-				<option value="Himachal Pradesh">Himachal Pradesh</option>
-				<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-				<option value="Jharkhand">Jharkhand</option>
-				<option value="Karnataka">Karnataka</option>
-				<option value="Kerala">Kerala</option>
-				<option value="Lakshadweep">Lakshadweep (UT)</option>
-				<option value="Madhya Pradesh">Madhya Pradesh</option>
-				<option value="Maharashtra">Maharashtra</option>
-				<option value="Manipur">Manipur</option>
-				<option value="Meghalya">Meghalya</option>
-				<option value="Mizoram">Mizoram</option>
-				<option value="Nagaland">Nagaland</option>
-				<option value="Odisha">Odisha</option>
-				<option value="Pondicherry">Pondicherry (UT)</option>
-				<option value="Punjab">Punjab</option>
-				<option value="Rajasthan">Rajasthan</option>
-				<option value="Sikkim">Sikkim</option>
-				<option value="Tanil Nadu">Tamil Nadu</option>
-				<option value="Tripura">Tripura</option>
-				<option value="Uttar Pradesh">Uttar Pradesh</option>
-				<option value="Uttarakhand">Uttarakhand</option>
-				<option value="West Bengal">West Bengal</option>  -->
-			</select>      
-		<!--input type="text" class="form-control" id="loc" name="loc" placeholder="Enter Location  here..."-->			
-		</div>  
-		<button type="submit" class="btn btn-default" value="submit">Search</button>
+			<input id="loc" style="float:left;margin-right:400px" class="form-control" type="text" placeholder="Search Location Here For loc Wise Search" name="loc" onfocus="initialize('loc')">			
+		<button class="btn btn-primary btn-lg" data-toggle="modal" type="submit" style="margin-left:400px;margin-top:20px">
+	  	<h4>SEE LOCATION WISE RESULT</h4>
 	</form>
-      </div>
-      <div class="modal-footer">
-	<br>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+	</button>
 </div>
-        
-      </div>
+
 
          <h2 class="sub-header"></h2>
           <div class="table-responsive">
@@ -272,8 +125,66 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+
+    <script>
+function initialize(elem_id) {
+    var id = elem_id;
+    var options = {
+  types: ['(cities)'],
+  componentRestrictions: {country: 'in'}
+};
+  //var input = (document.getElementById("pac-input"));
+  var input = (document.getElementById(id));
+
+  var types = document.getElementById('type-selector');
+  
+var autocomplete = new google.maps.places.Autocomplete(input,options);
+  //autocomplete.bindTo('bounds', map);
+
+  var infowindow = new google.maps.InfoWindow();
+  /*var marker = new google.maps.Marker({
+    map: map,
+    anchorPoint: new google.maps.Point(0, -29)
+  });*/
+
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    infowindow.close();
+    //marker.setVisible(false);
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      return;
+    }
+
+    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+    document.write(place.name);
+//	console.log("dgsgshshsgs");
+//document.getElementsByClassName("pac-container")[0].setAttribute("z-index",1231241);
+ //document.getElementByClassName("pac-container")[0].style("display:block");
+    infowindow.open(map, marker);
+  });
+
+
+
+  function setupClickListener(id, types) {
+    var radioButton = document.getElementById(id);
+    google.maps.event.addDomListener(radioButton, 'click', function() {
+      autocomplete.setTypes(types);
+    });
+  }
+
+  setupClickListener('changetype-all', []);
+};
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>    
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+
     <script src="{% static 'js/bootstrap.min.js'%}"></script>
+	    <script src="{% static 'js/jquery.min.js'%}"></script>
     
   </body>
 </html>

@@ -1,0 +1,40 @@
+@import url(/wp-content/themes/required-foundation/style.css);@import url(/wp-content/themes/required-themes/stylesheets/social_foundicons.css);@import url(/wp-content/themes/required-themes/stylesheets/themes/github.css);body,p,li,dl,dt,dd,pre,blockquote,th,td{font-size:16px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;color:#222}h5,h6{font-weight:700}#welcome .req-plus{font-size:70%;bottom:1ex}sup{font-size:100%;bottom:0}.button{font-weight:normal}#site-title{font-weight:600}a:not(.button){color:#E91C21}a:not(.button):hover{color:#D01217}.contain-to-grid .top-bar{max-width:1030px}.contain-to-grid,.top-bar{background:#000;margin-bottom:0}.top-bar ul > li
+a.logo{padding:0px
+5px 0 15px}.top-bar ul > li
+.slash{padding-left:0;font-family:Georgia;font-size:16px;font-weight:normal}.top-bar ul > li
+a.button{margin-right:15px}.top-bar ul > li a:not(.button){font-weight:normal}.top-bar ul>li.divider{background:#222}.top-bar ul > li:not(.name).current-page-ancestor
+a{color:#D9D9D9}.row{width:1030px}#welcome{background:#efefef;padding:60px
+0 40px 0;border-bottom:1px solid #dedede;text-align:center}#welcome
+h1{font-size:7em;font-weight:600}#welcome
+h4{font-size:2.5em}#welcome
+.buttons{margin-top:32px}#welcome .buttons
+p{margin-top:16px}#welcome h1,
+#welcome h4,
+#welcome
+p{color:#222;text-shadow:0 1px 0 #fff}#contentinfo{background:#efefef;margin-top:40px;border-top:1px solid #dedede;color:#222;text-shadow:0 1px 0 #fff}#contentinfo
+i{vertical-align:middle;font-size:24px}#footer .columns:last-child{text-align:right}.off-canvas .row,
+.home
+#footer.row{width:1440px}.off-canvas .row
+.row{width:auto}body.home .columns.text-center{padding:10px
+0 0 0}.page-header{background:#efefef;padding:30px
+0 30px 0;border-bottom:1px solid #dedede}.page-header h1,
+.page-header
+h3{text-shadow:0 1px 0 #fff}#container{padding-top:30px}.entry-content ul.nav-bar,
+.entry-content ul.nav-bar
+ul{margin-left:0}.entry-content .inpage-template{height:300px;padding:5px;border:1px
+solid #ddd;overflow:hidden}.entry-content .inpage-template .row
+.columns{padding:0
+2.5px}.entry-content .inpage-template
+.row{margin:0}.entry-content .inpage-template
+span{background-color:#ddd;margin-bottom:5px;display:block}ol.commentlist{margin-left:0}#comments-title,
+#respond
+h3{font-size:23px}#allowed_tags{display:none}aside
+p{font-size:14px;font-style:normal}.panel.jobs ul,
+.panel.req-recent-posts
+ul{list-style:none;margin-left:0}.panel.jobs li,
+.panel.req-recent-posts
+li{font-size:14px}.panel.jobs{background:transparent}.page-template-page-templatesiframe-page-php
+#container{padding:0}#supplementary
+hr{display:none}@media only screen and (max-width: 767px){body,p,li,dl,dt,dd,pre,blockquote,th,td{font-size:14px}#welcome
+h1{font-size:40px}#welcome
+h4{font-size:30px}h1{font-size:36px}h2{font-size:32px}h3{font-size:24px}h4{font-size:20px}#footer .columns:last-child{text-align:center}}@media only screen and (max-width: 1030px){.contain-to-grid .top-bar{width:auto;max-width:auto}}
