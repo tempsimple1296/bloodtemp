@@ -1,292 +1,95 @@
+
 <!DOCTYPE html>
-<html lang="en" class="marketing-layout subscriptions-controller plans-action ff "   >
-  <head>
-    <title>Am I Eligible</title>
-    <meta charset="UTF-8" />
-      <!--<meta name="description" content="Join Treehouse today. Sign up in minutes. Choose from our basic, pro, and group plans. Satisfaction guaranteed." />-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"d98036d1cc","applicationID":"1824378","transactionName":"cQ5eRRQNCQ8BFhZLQlASU0MPEhEKCwpKF0deAF5C","queueTime":1,"applicationTime":383,"agentToken":null,"agent":"js-agent.newrelic.com/nr-411.min.js"}
-</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o?o:n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({D5DuLP:[function(t,n){function e(t,n){var e=r[t];return e?e.apply(this,n):(o[t]||(o[t]=[]),void o[t].push(n))}var r={},o={};n.exports=e,e.queues=o,e.handlers=r},{}],handle:[function(t,n){n.exports=t("D5DuLP")},{}],G9z0Bl:[function(t,n){function e(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&p&&p.body){l.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",i("mark",["onload",a()]);var n=p.createElement("script");n.src=l.proto+t.agent,p.body.appendChild(n)}}function r(){"complete"===p.readyState&&o()}function o(){i("mark",["domContent",a()])}function a(){return(new Date).getTime()}var i=t("handle"),u=window,p=u.document,s="addEventListener",c="attachEvent",f=(""+location).split("?")[0],l=n.exports={offset:a(),origin:f,features:[]};p[s]?(p[s]("DOMContentLoaded",o,!1),u[s]("load",e,!1)):(p[c]("onreadystatechange",r),u[c]("onload",e)),i("mark",["firstbyte",a()])},{handle:"D5DuLP"}],loader:[function(t,n){n.exports=t("G9z0Bl")},{}]},{},["G9z0Bl"]);</script>
-    <!--meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="google-site-verification" content="4Ga-viQvIZUFNQXu323xpp_24RDlLooxwlpnXhinjPA" />
-    <meta name="msvalidate.01" content="F0716E70B7DD3B8C892B48891CA4B541" />
-    <meta content="authenticity_token" name="csrf-param" />
-<meta content="WJxsHY/gfg/yzokpDazNoCsinq579zaKU0llNm0WlPU=" name="csrf-token" />
--->
-        <link href="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing-ae688a6de1ffbbec901e1681caa5e40b.css" media="screen" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7055252/762022/css/fonts.css" />
-    
+<html lang="en">	  
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <link rel="shortcut icon" href="/assets/favicon.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/apple-touch-icon-57x57-precomposed-4947a2f0f552b35ae3d4689d81456723.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/apple-touch-icon-72x72-precomposed-d5be9b93d70eddccb5d5dae6391a7189.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/apple-touch-icon-114x114-precomposed-891ae954b02506fe179846da3fbc3c79.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/apple-touch-icon-144x144-precomposed-7b315ae9cb62f8b23f96c575f7dd43eb.png" />
+    <title>BloodApp (Bleed Red)</title>
+	{% load staticfiles%}
+    <!-- Bootstrap core CSS -->
+<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-      <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-  for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-  mixpanel.init("7b38bdec31b0d42dc60b2c77d946e5ad");</script><!-- end Mixpanel -->
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
 
-  <!-- start GoogleAnalytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    window._gaq = _gaq;
-    _gaq.push(['_setAccount', 'UA-25670760-9']);
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
 
-    _gaq.push(['_setCustomVar', 1, 'logged-in', 'false', 3]);
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
 
-
-    _gaq.push(['_trackPageview']);
-
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-  <!-- end GoogleAnalytics -->
-
-
-    
   </head>
 
-<body id="" class="">
+  <body>
 
+    <div class="container">
 
-  <!-- End Global Messages -->
-
-    <div class="global-message-container featurette bogo" data-featurette="global-message-container-with-key" data-hide='bogo-bar' style="display: none;">
-      <div class="row global-message">
-        <div class="twelve columns">
-          <a class="close-message"><span class="icon icon-close"></span></a>
-        </div>
+      <div class="masthead">
+        <h3 class="text-muted">Blood App</h3>
+        <ul class="nav nav-justified">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/termsAndCondition">Terms And Conditions</a></li>
+          <li><a href="/am-I-Eligible">Who Is Eligible</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="/listUsers">Registered Entries</a></li>
+          <li><a href="/whyBloodApp">Why BloodAPP is Made?</a></li>
+        </ul>
       </div>
-    </div>
+      <div class="jumbotron">
+	<u><h1>Frequently Asked Questions</h1></u>
+      </div>
 
-<header class="header">
-  <div class="row">
-    <div class="four columns logo-container">
-      <h2 class="th-logo">
-        <a href="/"><svg class="treehouse-logo" preserveAspectRatio="xMinYMin meet" viewBox="0 0 139 32">
-	<path class="icon-treehouse" d="M42.8,21c-0.4,0.1-0.9,0.2-1.4,0.2c-1,0-1.4-0.6-1.4-1.6v-4.5h2.8c0.7,0,1.4-0.5,1.4-1.3s-0.6-1.3-1.4-1.3
-		H40V11c0-0.9-0.7-1.5-1.5-1.5S37,10.2,37,11v8.7c0,2.5,1.2,4.3,4,4.3c0.8,0,1.9-0.1,2.7-0.5c0.7-0.3,0.9-0.8,0.9-1.3
-		C44.6,21.5,43.9,20.8,42.8,21z M52.8,12.1c-0.4-0.1-1.2-0.2-1.9-0.2c-2.5,0-3.9,1.5-3.9,3.8v6.8c0,0.8,0.7,1.5,1.5,1.5
-		s1.5-0.7,1.5-1.5v-6.2c0-1,0.4-1.4,1.1-1.4c0.7,0,1.1,0.2,1.7,0.2c0.9,0,1.4-0.8,1.4-1.4C54.1,12.9,53.7,12.4,52.8,12.1z M61.1,11.9
-		c-2.8,0-4.8,1.8-5.1,4.7c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2
-		c0-0.8-0.7-1.6-1.9-1.2c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19h5.7c1,0,1.5-0.6,1.5-1.5V17C66,13.9,64,11.9,61.1,11.9z
-		 M63,17h-4.2c0-1.5,0.7-2.5,2.3-2.5c1.4,0,2.2,0.9,2.1,2.2C63.2,16.9,63.2,17,63,17z M73.1,11.9c-2.8,0-4.8,1.8-5.1,4.7
-		c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2c0-0.8-0.7-1.6-1.9-1.2
-		c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19h5.7c1,0,1.5-0.6,1.5-1.5V17C78,13.9,76,11.9,73.1,11.9z M75,17h-4.2
-		c0-1.5,0.7-2.5,2.3-2.5c1.4,0,2.2,0.9,2.1,2.2C75.2,16.9,75.2,17,75,17z M123.6,16.9l-1.6-0.4c-1-0.2-1.3-0.5-1.3-1s0.5-0.9,1.6-0.9
-		c0.6,0,1.3,0.2,1.9,0.5c0.7,0.4,1.5,0.3,1.9-0.2c0.5-0.5,0.5-1.4-0.1-2c-0.8-0.6-2.2-1-3.6-1c-2.6,0-4.5,1.3-4.5,3.7
-		c0,1.9,1.4,2.9,3.2,3.4c0.9,0.2,0.8,0.2,1.6,0.4c0.9,0.2,1.3,0.6,1.3,1c0,0.6-0.5,1-1.7,1c-1,0-1.9-0.3-2.6-0.7
-		c-0.7-0.5-1.5-0.3-1.9,0.3c-0.4,0.6-0.3,1.4,0.3,1.8c0.8,0.7,2.1,1.3,4.2,1.3c2.6,0,4.6-1.4,4.6-3.8
-		C126.9,18.5,125.8,17.4,123.6,16.9z M137.5,19c1,0,1.5-0.6,1.5-1.5l0,0V17c0-3.1-2-5.1-4.9-5.1c-2.8,0-4.8,1.8-5.1,4.7
-		c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2c0-0.8-0.7-1.6-1.9-1.2
-		c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19H137.5z M134.1,14.5c1.4,0,2.2,0.9,2.1,2.2c0,0.2-0.1,0.3-0.2,0.3h-4.2
-		C131.8,15.5,132.6,14.5,134.1,14.5z M97.5,11.9c-3,0-5.2,1.9-5.5,4.5c-0.1,0.9-0.1,2.3,0,3.2c0.2,2.6,2.5,4.5,5.5,4.5
-		s5.2-1.9,5.4-4.5c0.1-0.9,0.1-2.2,0-3.1C102.7,13.8,100.5,11.9,97.5,11.9z M99.9,19.1c-0.1,1.3-1,2.1-2.4,2.1s-2.3-0.9-2.4-2.1
-		c0-0.6,0-1.6,0-2.2c0.1-1.3,1-2.1,2.4-2.1s2.3,0.9,2.4,2.1C100,17.5,100,18.5,99.9,19.1z M85.6,11.9c-1.1,0-2.3,0.4-2.7,0.9l0,0V9.6
-		c0-0.9-0.6-1.5-1.4-1.5s-1.4,0.7-1.4,1.5v12.9c0,0.8,0.7,1.5,1.5,1.5s1.4-0.7,1.4-1.5v-6.7c0.5-0.5,1.3-0.9,2.3-0.9
-		c1.2,0,1.9,0.7,1.9,2.1v5.5c0,0.9,0.6,1.6,1.4,1.6c0.9,0,1.5-0.7,1.5-1.6v-5.7C90,13.6,88.4,11.9,85.6,11.9z M113.6,12
-		c-0.8,0-1.5,0.7-1.5,1.5v7.1c-0.5,0.3-1.2,0.6-2.1,0.6c-1.2,0-2.1-0.7-2.1-2.1v-5.6c0-0.9-0.7-1.6-1.5-1.6c-0.9,0-1.4,0.7-1.4,1.6
-		v5.7c0,3.1,1.8,4.8,4.9,4.8c2.3,0,3.9-0.8,4.6-1.3c0.4-0.2,0.5-0.5,0.5-1v-8.2C115,12.7,114.4,12,113.6,12z"/>
-	<path class="icon-logo" d="M28.4,7c-0.4-0.2-1.3-0.6-2.3-1.2c-1.1-0.6-2.8,0.4-3.9,2.1l-1.9,3.2c-0.7,1.4-0.6,2.9,0.3,4.2l0.1,0.1
-		c0.9,1.3,2.1,2.4,2.4,2.8c0.2,0.2,0.4,0.6,0.5,0.9c0.3,1.2-0.3,2.3-1.5,2.6c-1.1,0.3-2.3-0.4-2.7-1.5c-0.1-0.3-0.1-0.6-0.1-0.9
-		c0.1-0.5-0.1-1.3-0.8-1.9c-0.7-0.8-2.1,0.7-2.5,2.1v0.1c-0.4,1.5-0.7,2.7-0.6,2.8c0,0.1,0.1,0.2,0.1,0.2c0.6,1.2,0.2,2.6-1,3.2
-		s-2.7,0.2-3.3-1s-0.2-2.6,1-3.2c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.3-0.7,0.6-1.4c0.2-0.7,0.4-1.3,0.4-1.3c0-0.1,0-0.2,0.1-0.2l1.2-4.2
-		l-1.2,2.5c-0.2-0.5-0.4-0.5-1-0.1c-0.3,0.2-0.9,0.7-1.1,0.9c-0.5,0.4-0.9,1.1-1.1,1.5c-0.1,0.3-0.3,0.5-0.5,0.7
-		c-0.9,0.8-2.3,0.6-3-0.3s-0.5-2.1,0.4-2.8c0.3-0.2,0.6-0.4,0.9-0.4c0.5-0.1,2.4-1.3,3.5-2c0.2-0.1,0.4-0.3,0.5-0.4l2.9-2.1l-2.6,1.4
-		c0,0-0.3,0-0.6,0c-0.8,0.1-1.8,0.2-2,0.5c-0.1,0.1-0.2,0.3-0.4,0.4c-0.8,0.4-2,0.2-2.7-0.6c-0.6-0.9-0.4-2,0.4-2.6
-		c0.5-0.3,0.9-0.4,1.3-0.4c0.7,0,2.5,0.4,4,0.1l0.4-0.1c1.5-0.3,3.3-1.5,4-2.9c0,0,0.7-1.3,1.6-2.7c0.9-1.5,0.8-3.1-0.1-3.7l-1.7-1
-		c-0.9-0.5-2.3-0.5-3.2,0L1.6,6.8C0.7,7.3,0,8.6,0,9.6v12.8c0,1,0.7,2.1,1.6,2.6l11.9,6.6c0.9,0.5,2.3,0.5,3.2,0l11.7-6.7
-		c0.9-0.5,1.6-1.6,1.6-2.6V9.6C30,8.6,29.3,7.5,28.4,7z"/>
-</svg></a>
-      </h2>
-    </div><!-- /four column -->
-
-    <a href="#" class="menu-toggle icon icon-hamburger-white"></a>
-
-    <nav class="eight columns toggle-jump main-nav">
-      <ul class="nav right">
-           <li class="pricing current">
-            <a href="/">HOME</a>
-          </li>
-          <li class="pricing current">
-            <a href="/register">REGISTER</a>
-          </li>
-	   <li class="pricing current">
-		<a href="#">FEATURES</a>
-	  </li>
-          <li class="sign-up">
-            <a class="btn btn-trans btn-solid btn-tiny" href="/listUsers">View Registered Entries</a>
-          </li>
-<br><br>
-Follow Us On Social World
-<br>
-<ul class="social">
-        <li>
-          <a href="#" title="Facebook">
-            <span class="icon icon-social-facebook"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Google Plus">
-            <span class="icon icon-social-googleplus"></span>
-          </a>
-        </li>
-        </ul>
-      </ul>
-	<!-- /nav right -->
-    </nav><!-- /eight columns -->
-  </div><!-- /row -->
-
-</header>
-	</div>
-</div>
-
-  <div id="planQuotes">
-  <div class="row text-centered">
-    <h3>Problems For Which BloodApp is Made..!!!</h3>
-  </div>
-  <div class="row quotes">
-<div class="eight columns">
-      <blockquote class="quote-text">India faces a whopping <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">blood deficit </a>of approximately 30-35 per cent annually. The country needs around eight to 10 million units of blood every year but manages a measly 5.5 million units.</blockquote>
-      <img alt="Graham Davidson" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_graham_davidson-d6016911050b538f7060382a90d3fc5e.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
+      <div class="row">
+        <div class="col-lg-4">
+          <u><h3> Is there any danger in donating blood?</h3></u>
+          <p>There is virtually no danger. Only sterile and disposable needles are used to collect blood.There is absolutely no chance of catching any infectious disease by donating blood.</p>
+          </div>
+        
+        <div class="col-lg-4">
+          <u><h3>Will I get AIDS?</h3></u>
+          <p>Absolutely not! All equipments used to collect blood are sterile. These items are used once and discarded. Blood collections are performed by professionally trained blood bank personnel whose primary concern is your safety and the safety of the blood to be transfused.</p>
+        </div>
+	<div class="col-lg-4">
+          <u><h3>Will it hurt?</h3></u>
+          <p>Giving blood is not painful. You may feel a pinch in the beginning lasting only a couple of seconds. </p>
+        </div>      
     </div>
-    <div class="four columns">
-      <blockquote class="quote-text"><h5>See ZeeNewsIndia Report For Verification.<h5>
-<a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">Click Here</a></blockquote>
-      <img alt="Jon Farrell" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_jon_farrell-ae7ee501b021d234aee2c545d2033536.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    
-  </div>
-  <div class="row quotes">
-    <div class="eight columns">
-      <blockquote class="quote-text">In India only 6 per cent of women in India donated blood is also a reflection on the state of the health of our women, most of them facing under nourishment and other typical health problems aggravated due to gender discrimination and vulnerability. “It is not at all genuine that Indian women are not coming up to donate blood; the percentage is low as they are deferred due to physiological problems. Most of them have low hemoglobin count and fail to meet the minimum requirements to donate blood and hence the percent count is low</blockquote>
-      <img alt="Martha Chumo" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_martha_chumo-817f93971f5a1b72ce18a33d0360d885.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    <div class="four columns">
-      <blockquote class="quote-text"><h5>See ZeeNewsIndia Report For Verification.<h5>
-<a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">Click Here</a></blockquote>
-      <img alt="Jon Farrell" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_jon_farrell-ae7ee501b021d234aee2c545d2033536.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    
-</div>
-<div class="row quotes">
-    <div class="eight columns">
-      <blockquote class="quote-text">According to a 2012 World Health Organisation (WHO) report, only nine million units are collected annually, while the need is for 12 million units.</blockquote>
-      <img alt="Martha Chumo" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_martha_chumo-817f93971f5a1b72ce18a33d0360d885.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    <div class="four columns">
-      <blockquote class="quote-text"><h5>See TimesOfIndia Report For Verification.<h5>
-<a href="http://timesofindia.indiatimes.com/life-style/health-fitness/health/India-facing-a-blood-shortage-of-3-million-units/articleshow/36492006.cms">Click Here</a></blockquote>
-      <img alt="Jon Farrell" class="quote-author-pic" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/marketing/stories/stories_jon_farrell-ae7ee501b021d234aee2c545d2033536.jpg" />
-      <p class="quote-author"><strong>Message From Developer</strong></p>
-    </div>
-    
-</div>
-
-</div><!-- /plans-content -->
-
-<div class="section secondary-content faq-header">
-  <div class="row">
-  <div class="twelve columns">
-    <h3 class="text-centered">Frequently Asked Questions</h3>
-  </div>
-</div>
 <div class="row">
-  <div class="six columns">
-    <p class="faq-text">
-      <strong> Is there any danger in donating blood?</strong>
-      There is virtually no danger. Only sterile and disposable needles are used to collect blood.  There is absolutely no chance of catching any infectious disease by donating blood.</p>
-    <p class="faq-text">
-      <strong>How often can I donate blood?</strong>
-       It is safe to donate blood once in every three months.</p>
-    <p class="faq-text">
-      <strong>Why do I have to wait for three months before donating again?</strong>
-      Since blood contains iron (which is essential for making new red blood cells), donating blood more often than every 3 months causes the body to lose iron faster than it can be made up from iron-containing foods in our diet. As a result the donor could develop iron deficiency anemia, causing him/her to feel weak and tired.</p>
-    <p class="faq-text">
-      <strong>What if I faint?</strong>
-       The likelihood of this happening is minimal. You should eat before donating and drink extra fluids, especially after your donation.</p>
-  </div>
-  <div class="six columns">
-    <p class="faq-text">
-      <strong>Will it hurt?</strong>
-       Giving blood is not painful. You may feel a pinch in the beginning lasting only a couple of seconds. </p>
-    <p class="faq-text">
-      <strong>Will I become weak if I donate frequently?</strong>
-       No. It is perfectly healthy to donate blood once in every 3 months for an individual.</p>
-    <p class="faq-text">
-      <strong>Will I get AIDS?</strong>
-       Absolutely not! All equipments used to collect blood are sterile. These items are used once and discarded. Blood collections are performed by professionally trained blood bank personnel whose primary concern is your safety and the safety of the blood to be transfused. </p>
-<p class="faq-text">
-      <strong>I suffer from diabetes, Can I Still Donate Blood?</strong>
-       Yes one can still donate blood if you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.</p>
-    
-  </div><!-- /six columns -->
-</div><!-- /row -->
-</div><!-- /secondary-content -->
+        <div class="col-lg-4">
+          <u><h3>Why do I have to wait for three months before donating again?</h3></u>
+          <p>Since blood contains iron (which is essential for making new red blood cells), donating blood more often than every 3 months causes the body to lose iron faster than it can be made up from iron-containing foods in our diet. As a result the donor could develop iron deficiency anemia, causing him/her to feel weak and tired.</p>
+          </div>
+<div class="col-lg-4">
+          <u><h3>I suffer from diabetes, Can i Still Donate Blood?</h3></u>
+          <p>Yes one can still donate blood if you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.</p>
+          </div>
 
-
-
-<script type="text/javascript">
-  /* <![CDATA[ */
-  var google_conversion_id = 1017883234;
-  var google_conversion_label = "-Ff1CNbzqQMQ4tSu5QM";
-  var google_custom_params = window.google_tag_params;
-  var google_remarketing_only = true;
-  /* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-  <div style="display:inline;">
-    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017883234/?value=0&amp;label=-Ff1CNbzqQMQ4tSu5QM&amp;guid=ON&amp;script=0"/>
-  </div>
-</noscript>
-
-
-<!-- Footer -->
-<div class="minimal-footer">
-  <div class="row">
-    <div class="twelve columns">
-      <img alt="Minimal footer logo" class="minimal-footer-logo" src="https://wac.A8B5.edgecastcdn.net/80A8B5/static-assets/assets/new-marketing/minimal-footer-logo-a210f0c71ee46d218f4cf00a5efb9cb6.svg" />
-      <p>
-        &copy;BloodApp<br>
-        <a href="#">Terms and Condition</a><br>For Any Suggestions Or Queries Mail Us At : pmBloodApp@gmail.com
-      </p>
-      <ul class="social">
-        <li>
-          <a href="#" title="Facebook">
-            <span class="icon icon-social-facebook"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="Google Plus">
-            <span class="icon icon-social-googleplus"></span>
-          </a>
-        </li>
-        </ul>
-    </div>
-  </div>
+<div class="col-lg-4">
+          <u><h3>What if I faint?</h3></u>
+          <p>The likelihood of this happening is minimal. You should eat before donating and drink extra fluids, especially after your donation.</p>
+          </div>
 </div>
-
-  <!-- Dev Footer -->
-
-
-  </div><!-- /row -->
-</div><!-- /footer -->
-
-
-</body>
+      <div class="row">
+        <div class="col-lg-4">
+          <u><h3>Can one donate blood if one’s body weight is less than 45 kg?</h3></u>
+          <p>Not desirable. But in extreme emergency, a margial difference in weight to the tune of 1 to 2 kg is not harmful, so long as body weight x 8ml is above or equal to the volume of donation.</p>
+          </div>
+        
+        <div class="col-lg-4">
+          <u><h3>Will I become weak if I donate frequently?</h3></u>
+          <p>No. It is perfectly healthy to donate blood once in every 3 months for an individual.</p>
+          </div>
+</div>
+      <div class="footer">
+        <p>Blood App</p>
+      </div>
+    </div> 
+  </body>
 </html>
 

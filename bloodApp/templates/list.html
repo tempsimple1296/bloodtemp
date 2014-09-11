@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    
-  
-
     <title>All USERS</title>
-
 	{% load staticfiles%}
+
+<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -21,6 +17,45 @@
     <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
   </head>
 
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+
+  <script>
+	function initialize(elem_id) {
+	    var id = elem_id;
+	    var options = {
+	  types: ['(cities)'],
+	  componentRestrictions: {country: 'in'}
+	};
+	  var input = (document.getElementById(id));
+	  var types = document.getElementById('type-selector');
+	  var autocomplete = new google.maps.places.Autocomplete(input,options);
+	  var infowindow = new google.maps.InfoWindow();
+	  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+	    infowindow.close();
+	    //marker.setVisible(false);
+	    var place = autocomplete.getPlace();
+	    if (!place.geometry) {
+	      return;
+	    }
+	    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+	    document.write(place.name);
+	    infowindow.open(map, marker);
+	  });
+
+
+
+	  function setupClickListener(id, types) {
+	    var radioButton = document.getElementById(id);
+	    google.maps.event.addDomListener(radioButton, 'click', function() {
+	      autocomplete.setTypes(types);
+	    });
+	  }
+
+	  setupClickListener('changetype-all', []);
+	};
+	google.maps.event.addDomListener(window, 'load', initialize);
+    </script>    
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -65,11 +100,11 @@
 	 </div>
       </div>
     </div>
-    <div class="jumbotron">
-	<h1>See Location Wise Results</h1>
+    <div class="jumbotron" style="margin-left:auto;margin-right:auto;width:80%">
 	<br>
 	<p>
-		<h2>Why to Search Through Location Wise Result ??</h2>
+	<h2><strong>See Location Wise Results</strong></h2>
+		<h3><u>Why to Search Through Location Wise Result ??</u></h3>
 		<p>
 			This feature help us to basically know the statistics that how many people are there of different groups.
 			It also tells that the specified location has majority with which BloodGroup.<br>(Example --> Chandigarh has majority of O+)
@@ -78,14 +113,13 @@
 	</p>
 	<form action="/count/" method="post">
 		{% csrf_token %}
-			<input id="loc" style="float:left;margin-right:400px" class="form-control" type="text" placeholder="Search Location Here For loc Wise Search" name="loc" onfocus="initialize('loc')">			
-		<button class="btn btn-primary btn-lg" data-toggle="modal" type="submit" style="margin-left:400px;margin-top:20px">
-	  	<h4>SEE LOCATION WISE RESULT</h4>
+			<input id="loc" class="form-control" style="width:auto" type="text" placeholder="Search Location Here For loc Wise Search" name="loc" onfocus="initialize('loc')">		
+<br>
+		<button class="btn btn-primary btn" style="width:auto" data-toggle="modal" type="submit">
+	  	LOCATION WISE RESULT
 	</form>
 	</button>
 </div>
-
-
          <h2 class="sub-header"></h2>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -100,7 +134,6 @@
                 </tr>
               </thead>
               <tbody>
-				
 			{% for u in users %}
                 <tr>
                   <td>{{u.userName}}</td>
@@ -110,9 +143,7 @@
 		  <td>{{u.time}}</td>
 		  <td><a href="{{u.userContact}}">{{u.userContact}}</a></td>
                 </tr>
-			{% endfor %}
-                
-                
+			{% endfor %}         
               </tbody>
             </table>
           </div>
@@ -120,71 +151,8 @@
       </div>
     </div>
  
-
-<!-- Button trigger modal -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
-
-    <script>
-function initialize(elem_id) {
-    var id = elem_id;
-    var options = {
-  types: ['(cities)'],
-  componentRestrictions: {country: 'in'}
-};
-  //var input = (document.getElementById("pac-input"));
-  var input = (document.getElementById(id));
-
-  var types = document.getElementById('type-selector');
-  
-var autocomplete = new google.maps.places.Autocomplete(input,options);
-  //autocomplete.bindTo('bounds', map);
-
-  var infowindow = new google.maps.InfoWindow();
-  /*var marker = new google.maps.Marker({
-    map: map,
-    anchorPoint: new google.maps.Point(0, -29)
-  });*/
-
-  google.maps.event.addListener(autocomplete, 'place_changed', function() {
-    infowindow.close();
-    //marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    if (!place.geometry) {
-      return;
-    }
-
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    document.write(place.name);
-//	console.log("dgsgshshsgs");
-//document.getElementsByClassName("pac-container")[0].setAttribute("z-index",1231241);
- //document.getElementByClassName("pac-container")[0].style("display:block");
-    infowindow.open(map, marker);
-  });
-
-
-
-  function setupClickListener(id, types) {
-    var radioButton = document.getElementById(id);
-    google.maps.event.addDomListener(radioButton, 'click', function() {
-      autocomplete.setTypes(types);
-    });
-  }
-
-  setupClickListener('changetype-all', []);
-};
-
-
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>    
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
-
     <script src="{% static 'js/bootstrap.min.js'%}"></script>
-	    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/jquery.min.js'%}"></script>
     
   </body>
 </html>

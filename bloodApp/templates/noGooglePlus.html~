@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Frequently Asked Questions</title>
 
     <!-- Bootstrap core CSS -->
       {% load staticfiles %}
+	<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
@@ -60,13 +60,13 @@
 <div class="page-header" style="margin-top:80px">
 	<font style="color:green;margin-top:20px"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errors in Registeration Form of BloodApp</h1></font>
 </div>
-<div style="margin-top:50px">	
-	<div class="alert alert-danger"	style="margin-right:700px;margin-left:100px">
+<div>	
+	<div class="alert alert-danger" style="width:80%;margin-left:auto;margin-right:auto;">
 			<h3>Sorry it Seems Like You Have'nt Joined Google+ Profile So Kindly First Join it And Then Register...</h3>
 	</div>	
 </div>
-<div style="margin-top:50px;margin-left:100px">
-	<a href="/register"><h3>Click Here To Register Again </h3></a>
+<div>
+	<a href="/register"><h3>&nbsp;&nbsp;&nbsp;Click Here To Register Again </h3></a>
 </div>
 	
 </body>

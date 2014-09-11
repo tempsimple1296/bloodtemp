@@ -3,6 +3,7 @@
 <head>
 	{% load staticfiles%}
     <!-- Bootstrap core CSS -->
+<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 </head>
 
@@ -57,9 +58,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <body>
 	<div class="jumbotron">
 	<h1>Register For Blood App</h1>
-        <!--<p class="lead">Just By Donating Blood , You Can Save Someone's Life...</p-->
-	<p class="lead">By Clicking on "Register With Facebook" OR "Register With Google+" You Accept All Terms And Conditions Mentioned By BloodApp(<a href="/termsAndCondition" >Click Here To See Terms And Conditions </a>)</p>
-      </div>
+        <p class="lead">Just By Donating Blood , You Can Save Someone's Life...</p
+	</div>
 
  <div id="type-selector" class="controls">
     <div id="example" class="container">
@@ -101,8 +101,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	</div>       
 		
 	</div>
-
-    </div>
+<a href="/logout" class="btn btn-primary btn-lg active" role="button">LOGOUT</a>
+</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="{% static 'js/bootstrap.min.js'%}"></script>
 </body>

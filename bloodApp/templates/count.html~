@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>REGION WISE RESULT</title>
 
 	{% load staticfiles%}
+<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
-<!--	<script>
-		location.href+=document.getElementByName('searchBox').value;
-	</script>-->
+
   </head>
 
   <body>
@@ -63,9 +61,6 @@
 			{% for c in groupCount %}
                 <td>{{c}}</td>
 	        	{% endfor %}
-                <!--{% for major in majorbloodGroup %}
-		<td>{{major}}</td>
-		{% endfor %}-->
 		<td>{{majorbloodGroup}}</td>                
               </tbody>
             </table>
@@ -74,9 +69,6 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.min.js'%}"></script>
     

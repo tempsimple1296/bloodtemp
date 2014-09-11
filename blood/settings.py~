@@ -69,8 +69,8 @@ SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 #FACEBOOK_EXTENDED_PERMISSIONS = ['email','user_about_me','user_birthday']
 SOCIAL_AUTH_FACEBOOK_EXTENDED_PERMISSIONS = ['email', 'user_birthday']
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_birthday']
-
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_birthday','user_location']
+SOCIAL_AUTH_FACEBOOK_REQUEST_TOKEN_EXTRA_ARGUMENTS={'user_birthday'}   
 
 LOGIN_URL = '/account/login/'
 #LOGIN_REDIRECT_URL = '/'

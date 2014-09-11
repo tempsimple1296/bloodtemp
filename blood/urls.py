@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^home/',views.index),
     url(r'^register/',views.signin),
     url(r'^registerUser/',views.register),
-    url(r'complete/facebook/',views.register),
+#    url(r'complete/facebook/',views.register),
     url(r'^profile/',views.profile),
     url(r'^admin/', include(admin.site.urls)),
     url('account-already-associated',views.CustomSocialAuthExceptionMiddleware),
@@ -26,6 +26,8 @@ urlpatterns = [
     url(r'^termsAndCondition/$',views.termsAndCondition),
     url(r'^FAQ/$',views.FAQ),
     url(r'^whyBloodApp',views.whyBloodApp),
+    url(r'^features/',views.features),
+    url(r'^logout/',views.logout),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

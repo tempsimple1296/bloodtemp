@@ -18,11 +18,17 @@ class CustomSocialAuthExceptionMiddleware(SocialAuthExceptionMiddleware):
         else:
             return super(CustomSocialAuthExceptionMiddleware, self)\
                                  .get_redirect_uri(request, exception)
+
+def logout(request):
+	request.session.flush()
+	request.session.clear()
+	return HttpResponseRedirect('/')
+
 def signin(request):
-	if ((request.session.keys())):			
+	print '-----in signin(request)-----'
+	if (request.session.keys()):			
 		return HttpResponseRedirect('/registerUser')	
-	print 'sign in'
-	print request.session
+	print 'sign in called'
 	return render_to_response('signin.html')
 	
 '''def completeGoogleAuth(request):
@@ -65,22 +71,17 @@ def count(request):
 		for i in xrange(0,len(major)):
 			major[i]=bloodGroup[major[i]]
 		
-		return render_to_response('count.html',{'groupCount':f,'major':_max,'majorbloodGroup':major})#bloodGroup[index]})		
+		return render_to_response('count.html',{'groupCount':f,'major':_max,'majorbloodGroup':major})
 	return HttpResponse("Sorry the Page You Requested Does Not Exist...!!")	
 				
 def groups(req):
 	bloodGroup=""
 	loc=""
-	'''print "------------------------------------"
-	print req
-	print "------------------------------------"
-	'''
-	print req.POST
 	if(req.POST):
 		bloodGroup = req.POST['group']
 		loc=req.POST['loc']
-		print "bloodGroup-->",bloodGroup
-		print "loc --> ",loc		
+		#print "bloodGroup-->",bloodGroup
+		#print "loc --> ",loc		
 		#loc=req.POST['input-pac']		
 		if((bloodGroup and loc)):
 			f=User.objects.filter(userBloodGroup=bloodGroup).filter(userLoc=loc)
@@ -95,7 +96,7 @@ def groups(req):
 			return HttpResponse("No OneRegistered Yet ..!!!")
 		return render_to_response('result.html',{'users':f})		
 	else:
-		print 'No req.post called...!!!!!'    		
+		#print 'No req.post called...!!!!!'    		
 		return render_to_response('result.html')
 
 
@@ -107,16 +108,15 @@ def listAll(request):
 	template = loader.get_template("list.html")
     	data = RequestContext(request, {'users':f})
     	return HttpResponse(template.render(data))
-#	return HttpResponse(render(request, "blog/index.html", {'articles':[article]}))
 	
 def whyBloodApp(request):
-	return render_to_response('whyBloodAppNew.html')
+	return render_to_response('whyBloodApp.html')
 
 def FAQ(request):
-	return render_to_response('FAQNew.html')
+	return render_to_response('FAQ.html')
 
 def termsAndCondition(request):
-	return render_to_response('termsAndConditionNew.html')
+	return render_to_response('termsAndCondition.html')
 
 
 def BloodGroupOrdered(request,group):#,BloodGroup):
@@ -141,11 +141,11 @@ def register(request):
 	form = {}
 	context = {}
 	
-	print '------------------'
-	print request.method
-	print '------------------'
+	#print '------------------'
+	#print request.method
+	#print '------------------'
 	#print request
-	print "############################"
+	#print "############################"
 	if request.method=='POST':
 		form = RegisterationForm(request.POST)
 		print form		
@@ -182,8 +182,9 @@ def register(request):
 			form = RegisterationForm()
 			context = {'form':form}
 			provider = request.session.get('social_auth_last_login_backend')
-		
-			print "Current Provider --> ",provider
+			if(not(provider)):
+				request.session.flush()
+				return HttpResponseRedirect('/')
 			print '##############################'
 			print 'session'
 			lists=request.session.keys()
@@ -209,8 +210,7 @@ def register(request):
 			print 'JSON_DATA',json_data			
 			if(not('link' in json_data)):
                 		request.session.flush()
-                		#return HttpResponse("<h1>Sorry it Seems Like You Have'nt Joined Google+ Profile So Kindly First Join it And Then Register...</h1>")		
-				return render_to_response('noGooglePlus.html')	
+                		return render_to_response('noGooglePlus.html')	
 			form.fields['userName'].initial = json_data["name"]
 			form.fields['userContact'].initial = json_data["link"]
 			print data 	
