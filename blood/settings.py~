@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'blood.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-'''
+
 import dj_database_url
 DATABASES = { 'default' : dj_database_url.config()}
 
@@ -105,7 +105,7 @@ DATABASES = {
 	'PORT':'3306',
     }
 }
-
+'''
 # Internationalization
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'locale': 'ru_RU'}
 
