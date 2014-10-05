@@ -8,28 +8,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BloodApp (Bleed Red)</title>
+    <title>FAQ (Bleed Red)</title>
 	{% load staticfiles%}
-    <!-- Bootstrap core CSS -->
-<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
-
-  </head>
-
-  <body>
-
+    	<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
+    	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    	<link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
+	<script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+	<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+</head>
+<body>
     <div class="container">
-
       <div class="masthead">
         <h3 class="text-muted">Blood App</h3>
         <ul class="nav nav-justified">
@@ -65,15 +53,15 @@
           <u><h3>Why do I have to wait for three months before donating again?</h3></u>
           <p>Since blood contains iron (which is essential for making new red blood cells), donating blood more often than every 3 months causes the body to lose iron faster than it can be made up from iron-containing foods in our diet. As a result the donor could develop iron deficiency anemia, causing him/her to feel weak and tired.</p>
           </div>
-<div class="col-lg-4">
+	<div class="col-lg-4">
           <u><h3>I suffer from diabetes, Can i Still Donate Blood?</h3></u>
           <p>Yes one can still donate blood if you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.</p>
           </div>
 
-<div class="col-lg-4">
-          <u><h3>What if I faint?</h3></u>
-          <p>The likelihood of this happening is minimal. You should eat before donating and drink extra fluids, especially after your donation.</p>
-          </div>
+	<div class="col-lg-4">
+		  <u><h3>What if I faint?</h3></u>
+		  <p>The likelihood of this happening is minimal. You should eat before donating and drink extra fluids, especially after your donation.</p>
+	</div>
 </div>
       <div class="row">
         <div class="col-lg-4">
@@ -86,9 +74,6 @@
           <p>No. It is perfectly healthy to donate blood once in every 3 months for an individual.</p>
           </div>
 </div>
-      <div class="footer">
-        <p>Blood App</p>
-      </div>
     </div> 
   </body>
 </html>

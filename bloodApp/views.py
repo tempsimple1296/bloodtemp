@@ -235,5 +235,5 @@ def group_blood(request, bloodgroup):
 	return render_to_response('list.html',{'users':user_list})
 
 def features(request):
-	return render_to_response('')
+	return render_to_response('features.html')
 

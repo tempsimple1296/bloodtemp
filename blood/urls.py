@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^whyBloodApp',views.whyBloodApp),
     url(r'^features/',views.features),
     url(r'^logout/',views.logout),
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
+
