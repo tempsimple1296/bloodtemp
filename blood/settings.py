@@ -10,14 +10,9 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os.path import dirname,join
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = '/media/'
 
 import django.conf.global_settings as DEFAULT_SETTINGS
 
@@ -103,7 +98,7 @@ WSGI_APPLICATION = 'blood.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-'''
+
 import dj_database_url
 DATABASES = { 'default' : dj_database_url.config()}
 
@@ -117,7 +112,7 @@ DATABASES = {
 	'HOST':'localhost',
 	'PORT':'3306',
     }
-}
+}'''
 
 # Internationalization
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'locale': 'ru_RU'}
@@ -144,3 +139,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT= 'staticfiles'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 #'/home/prateek/blood/blood/templates/static')	
+
+
+MEDIA_ROOT=join(BASE_DIR,'media')
+MEDIA_URL='/media/'
+MAX_UPLOAD_SIZE=20971520
+CONTENT_TYPES=['application/pdf','image/jpeg','image/png','image/jpg','image/gif','audio/mp3']
+

@@ -6,21 +6,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>All Users (Bleed Red)</title>
+    <title>
+      All Users (Bleed Red)
+    </title>
 	{% load staticfiles%}
 	<link rel="icon" href="{% static 'images/BloodApp.ico' %}">
-    	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
   </head>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+  <body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="navbar-brand" href="/home">
+            BLOOD APP
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/register">
+                Register
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Features
+              </a>
+            </li>
+            <li>
+              <a href="/am-I-Eligible">
+                Am I Eligible
+              </a>
+            </li>
+          </ul>
+          <!--form class="navbar-form navbar-right">
 
-  <script>
-	function initialize(elem_id) {
-	    var id = elem_id;
-	    var options = {
+</form-->
+          <form class="navbar-form navbar-right" action="/group/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <input id="pac-input" class="form-control" type="text" placeholder="All Locations" name="loc" onfocus="initialize('pac-input')">
+              
+              
+              <select id="bd" class="form-control" name="group">
+                <option value="">
+                  All BloodGroups
+                </option>
+                
+                <option value="O+">
+                  O+
+                </option>
+                <option value="O-">
+                  O-
+                </option>
+                <option value="A+">
+                  A+
+                </option>
+                <option value="A-">
+                  A-
+                </option>
+                <option value="B+">
+                  B+
+                </option>
+                <option value="B-">
+                  B-
+                </option>
+                <option value="AB+">
+                  AB+
+                </option>
+                <option value="AB-">
+                  AB-
+                </option>
+              </select>
+              
+            </div>
+            
+            <button type="submit" class="btn btn-default" value="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <font style="color:red;text-align:center">
+      <h2>
+        <strong>
+          Registered Entries
+        </strong>
+      </h2>
+    </font>
+    <h2 class="sub-header">
+    </h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>
+              NAME
+            </th>
+            <th>
+              AGE
+            </th>
+            <th>
+              LOCATION
+            </th>
+            <th>
+              BLOOD GROUP
+            </th>
+            <th>
+              REGISTERED ON
+            </th>
+            <th>
+              CONTACT   (Facebook Link OR Google+ Link)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for u in users %}
+          <tr>
+            <td>
+              {{u.userName}}
+            </td>
+            <td>
+              {{u.userAge}}
+            </td>
+            <td>
+              {{u.userLoc}}
+            </td>
+            <td>
+              {{u.userBloodGroup}}
+            </td>
+            <td>
+              {{u.time}}
+            </td>
+            <td>
+              <a href="{{u.userContact}}">
+                {{u.userContact}}
+              </a>
+            </td>
+          </tr>
+          {% endfor %}         
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<font style="color:red;text-align:center">
+  <h2>
+    <strong>
+      NEW FEATURE
+    </strong>
+  </h2>
+</font>
+<div class="jumbotron" style="margin-left:auto;margin-right:auto;width:80%">
+  <br>
+  <p>
+    <div style="text-align:center;">
+      <h2>
+        <strong>
+          <u>
+            See Location Wise Results
+          </u>
+        </strong>
+      </h2>
+  </div>
+  
+  <p>
+    This feature help us to basically know the statistics that how many people are there of different groups.
+    It also tells that the specified location has majority with which BloodGroup.
+    <br>
+    (Example -->
+    Chandigarh has majority of O+)
+    <br>
+    Hence it can also give us the idea that if quantity of some blood Group in a location is getting less so according to majority
+    <br>
+    (of BloodGroup) ,one can decide where to organise blood Donation Camps. 
+  </p>
+</p>
+<form action="/count/" method="post">
+  {% csrf_token %}
+  <input id="loc" class="form-control" style="width:auto" type="text" placeholder="Search Location Here For loc Wise Search" name="loc" onfocus="initialize('loc')">
+  
+  <br>
+  <button class="btn btn-primary btn" style="width:auto" data-toggle="modal" type="submit">
+    LOCATION WISE RESULT
+  </form>
+</button>
+</div>
+<div class="footer">
+  <font style="color:grey">
+    <h3>
+      For Any Suggestions Or Queries Mail Us At : pmBloodApp@gmail.com
+    </h3>
+  </font>
+</div>
+
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places">
+</script>
+
+<script>
+  function initialize(elem_id) {
+    var id = elem_id;
+    var options = {
 	  types: ['(cities)'],
-	  componentRestrictions: {country: 'in'}
-	};
+          componentRestrictions: {
+            country: 'in'}
+        }
+            ;
 	  var input = (document.getElementById(id));
 	  var types = document.getElementById('type-selector');
 	  var autocomplete = new google.maps.places.Autocomplete(input,options);
@@ -35,121 +250,28 @@
 	    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
 	    document.write(place.name);
 	    infowindow.open(map, marker);
-	  });
-
-
-
+	  }
+                                   );
+      
+      
+      
 	  function setupClickListener(id, types) {
 	    var radioButton = document.getElementById(id);
 	    google.maps.event.addDomListener(radioButton, 'click', function() {
 	      autocomplete.setTypes(types);
-	    });
+	    }
+                                        );
 	  }
-
+      
 	  setupClickListener('changetype-all', []);
-	};
+	}
+    ;
 	google.maps.event.addDomListener(window, 'load', initialize);
-    </script>    
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/home">BLOOD APP</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Home</a></li>
-            <li><a href="/register">Register</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="/am-I-Eligible">Am I Eligible</a></li>
-          </ul>
-          <!--form class="navbar-form navbar-right">
-            
-          </form-->
-        <form class="navbar-form navbar-right" action="/group/" method="post">
-		{% csrf_token %}
-		<div class="form-group">
-			<input id="pac-input" class="form-control" type="text" placeholder="All Locations" name="loc" onfocus="initialize('pac-input')">	      
-			
-		<select id="bd" class="form-control" name="group">
-			<option value="">All BloodGroups</option>			
-			<option value="O+">O+</option>
-			<option value="O-">O-</option>
-			<option value="A+">A+</option>
-			<option value="A-">A-</option>
-			<option value="B+">B+</option>
-			<option value="B-">B-</option>
-			<option value="AB+">AB+</option>
-			<option value="AB-">AB-</option>
-		</select>		
-		</div>     
-		<button type="submit" class="btn btn-default" value="submit">Search</button>
-            </form>
-	 </div>
-      </div>
-    </div>
-    <div class="jumbotron" style="margin-left:auto;margin-right:auto;width:80%">
-	<br>
-	<p>
-	<h2><strong>See Location Wise Results</strong></h2>
-		<h3><u>Why to Search Through Location Wise Result ??</u></h3>
-		<p>
-			This feature help us to basically know the statistics that how many people are there of different groups.
-			It also tells that the specified location has majority with which BloodGroup.<br>(Example --> Chandigarh has majority of O+)
-			<br>Hence it can also give us the idea that if quantity of some blood Group in a location is getting less so according to majority<br>(of BloodGroup) ,one can decide where to organise blood Donation Camps. 
-		</p>
-	</p>
-	<form action="/count/" method="post">
-		{% csrf_token %}
-			<input id="loc" class="form-control" style="width:auto" type="text" placeholder="Search Location Here For loc Wise Search" name="loc" onfocus="initialize('loc')">		
-<br>
-		<button class="btn btn-primary btn" style="width:auto" data-toggle="modal" type="submit">
-	  	LOCATION WISE RESULT
-	</form>
-	</button>
-</div>
-         <h2 class="sub-header"></h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>NAME</th>
-                  <th>AGE</th>
-                  <th>LOCATION</th>
-                  <th>BLOOD GROUP</th>
-		  <th>REGISTERED ON</th>
-		  <th>CONTACT   (Facebook Link OR Google+ Link)</th>
-                </tr>
-              </thead>
-              <tbody>
-			{% for u in users %}
-                <tr>
-                  <td>{{u.userName}}</td>
-                  <td>{{u.userAge}}</td>
-                  <td>{{u.userLoc}}</td>
-                  <td>{{u.userBloodGroup}}</td>
-		  <td>{{u.time}}</td>
-		  <td><a href="{{u.userContact}}">{{u.userContact}}</a></td>
-                </tr>
-			{% endfor %}         
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-   <div class="footer">
-<font style="color:grey"><h3>For Any Suggestions Or Queries Mail Us At : pmBloodApp@gmail.com</h3></font>
-      </div>
+</script>
 
-    <script src="{% static 'js/bootstrap.min.js'%}"></script>
-    <script src="{% static 'js/jquery.min.js'%}"></script>
-    
-  </body>
+<script src="{% static 'js/bootstrap.min.js'%}">
+</script>
+<script src="{% static 'js/jquery.min.js'%}">
+</script>
+
 </html>
