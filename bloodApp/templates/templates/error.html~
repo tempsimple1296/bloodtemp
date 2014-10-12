@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Errors in BloodApp Form</title>
+    {% load staticfiles %}
+    <link rel="icon" href="{% static 'images/BloodApp.ico' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet">
+    <link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+ </head>
+
+<body>
+ <div class="masthead">
+        <h3 class="text-muted">Blood App</h3>
+        <ul class="nav nav-justified">
+          <li><a href="/">Home</a></li>
+          <li><a href="/termsAndCondition">Terms And Conditions</a></li>
+          <li><a href="/am-I-Eligible">Who Is Eligible</a></li>
+          <li><a href="/FAQ">FAQ</a></li>
+          <li><a href="/listUsers">Registered Entries</a></li>
+          <li><a href="/whyBloodApp">Why BloodAPP is Made?</a></li>
+        </ul>
+      </div>
+
+<div class="page-header" style="margin-top:80px">
+	<font style="color:green;margin-top:20px"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Errors in Registeration Form of BloodApp</h1></font>
+</div>
+<div style="margin-top:50px">	
+	{% for i in form %}
+		{% if i == "userLoc"%}
+		<div class="alert alert-danger"	style="width:80%;margin-left:auto;margin-right:auto;">
+			<h3>The Location Field is Required</h3>
+		</div>	
+		{% elif i == "userContact"%}
+		<div class="alert alert-danger"	style="width:80%;margin-left:auto;margin-right:auto;">
+			<h3>The Contact is Already in Use !!!</h3>
+		</div>	
+	{% elif i == "userAge"%}
+		<div class="alert alert-danger"	style="width:80%;margin-left:auto;margin-right:auto;">
+			<h3>The Age Must be Greater Than 17 and less than 61!!!</h3>
+		</div>	
+	{% elif i == "userName"%}
+		<div class="alert alert-danger"	style="width:80%;margin-left:auto;margin-right:auto;">
+			<h3>The Name Field Is Required!!!</h3>
+		</div>			
+		{% endif %}
+	{% endfor %}
+</div>
+<div style="margin-top:50px;">
+	<a href="/register"><h3>&nbsp;&nbsp;&nbsp;Click Here To Register Again </h3></a>
+</div>
+	
+</body>
+</html>

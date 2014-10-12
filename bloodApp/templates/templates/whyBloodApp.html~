@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>
+      Why BloodApp Made
+    </title>
+	{% load staticfiles%}
+    <link rel="icon" href="{% static 'images/BloodApp.ico' %}">
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{% static 'css/justified-nav.css'%}" rel="stylesheet"> 
+    <script src="{% static 'js/ie-emulation-modes-warning.js'%}"></script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js'%}"></script>
+    
+  </head>
+  
+  <body>
+    <div class="container">
+      
+      <div class="masthead">
+        <h3 class="text-muted">
+          Blood App
+        </h3>
+        <ul class="nav nav-justified">
+          <li>
+            <a href="/">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/termsAndCondition">
+              Terms And Conditions
+            </a>
+          </li>
+          <li>
+            <a href="/am-I-Eligible">
+              Who Is Eligible
+            </a>
+          </li>
+          <li>
+            <a href="/FAQ">
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a href="/listUsers">
+              Registered Entries
+            </a>
+          </li>
+          <li class="active">
+            <a href="/whyBloodApp">
+              Why BloodAPP is Made?
+            </a>
+          </li>
+        </ul>
+  </div>
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <p class="lead" style="margin-left:auto;margin-right:auto;">
+      <h1>
+        <u>
+          Why BloodApp is Made
+        </u>
+    </h1>
+  </p>
+    </div>
+    
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-lg-10">
+        <p>
+          <h4>
+            India faces a whopping 
+            <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">
+              blood deficit 
+            </a>
+            of approximately 30-35 per cent annually. The country needs around eight to 10 million units of blood every year but manages a measly 5.5 million units.
+        </h4>
+      </p>
+      <u>
+        <strong>
+          <h4>
+            <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">
+              >>
+              &nbsp;See ZeeNewsIndia Report For Verification
+            </a>
+          </h4>
+        </strong>
+      </u>
+    </div>
+  </div>
+  
+  <div class="row" style="margin-top:30px">
+    <div class="col-lg-11">
+      <p>
+        <h4>
+          In India only 6 per cent of women in India donated blood is also a reflection on the state of the health of our women, most of them facing under nourishment and other typical health problems aggravated due to gender discrimination and vulnerability. “It is not at all genuine that Indian women are not coming up to donate blood; the percentage is low as they are deferred due to physiological problems. Most of them have low hemoglobin count and fail to meet the minimum requirements to donate blood and hence the percent count is low
+      </h4>
+    </p>
+    <u>
+      <h4>
+        <a href="http://zeenews.india.com/exclusive/-india-faces-huge-blood-donation-deficit_5581.html">
+          >>
+          &nbsp;See ZeeNewsIndia Report For Verification.
+        </a>
+      </h4>
+    </u>
+  </div>
+</div>
+<div class="row" style="margin-top:30px">
+  <div class="col-lg-10">
+    <p>
+      <h4>
+        According to a 2012 World Health Organisation (WHO) report, only nine million units are collected annually, while the need is for 12 million units.
+    </h4>
+  </p>
+  <u>
+    <strong>
+      <h4>
+        <a href="http://timesofindia.indiatimes.com/life-style/health-fitness/health/India-facing-a-blood-shortage-of-3-million-units/articleshow/36492006.cms">
+          >>
+          &nbsp;See Times of India Report For Verification.
+        </a>
+      </h4>
+    </strong>
+  </u>
+</div>
+</div>
+<!-- Site footer -->
+<div class="footer">
+  <font style="color:grey">
+    <h3>
+      For Any Suggestions Or Queries Mail Us At : pmBloodApp@gmail.com
+    </h3>
+  </font>
+</div>
+
+</div>
+</body>
+</html>

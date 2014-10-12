@@ -35,7 +35,7 @@ def signin(request):
 	return HttpResponse("You Have Successfully Authorized with Google")
 '''
 def amIEligible(request):
-	return render_to_response('whoCanDonate.html')	
+	return render_to_response('Am-I-Eligible.html')	
 
 def count(request):
 	if(request.POST):
@@ -100,32 +100,32 @@ def groups(req):
 		return render_to_response('result.html')
 
 
-def listAll(request):
+def registered_entries(request):
 	f=User.objects.all()
 	#if request.method=="GET":
 	#	print 'Get....'
 	#f = User.objects.filter(userBloodGroup="o+")
-	template = loader.get_template("list.html")
+	template = loader.get_template("registered-entries.html")
     	data = RequestContext(request, {'users':f})
     	return HttpResponse(template.render(data))
 	
 def whyBloodApp(request):
-	return render_to_response('whyBloodApp.html')
+	return render_to_response('why-BloodApp.html')
 
 def FAQ(request):
 	return render_to_response('FAQ.html')
 
 def termsAndCondition(request):
-	return render_to_response('termsAndCondition.html')
+	return render_to_response('terms-and-condition.html')
 
 
 def BloodGroupOrdered(request,group):#,BloodGroup):
 	print group
 	return HttpResponse('Hehehe got you now..!!!')#render_to_response('bloodgroup.html')
 
-def profile(request):
+'''def profile(request):
 	return HttpResponse(request)
-
+'''
 def home(request):
 	return render_to_response('home.html')
 
@@ -135,7 +135,7 @@ def fbRegister(request):
 		form = RegisterationForm(request.POST)
 		if form.is_valid():				
 			entry = form.save()
-			return HttpResponseRedirect('/listUsers')
+			return HttpResponseRedirect('/RegisteredEntries')
 
 def register(request):
 	form = {}
@@ -161,10 +161,10 @@ def register(request):
 			'''	
 			if(((int(form.cleaned_data['userAge'])<18))and(int(form.cleaned_data['userAge'])>60)):
 				context = {'age_error':''}
-				return render_to_response('age_error.html',context,context_instance=RequestContext(request))	
+				return render_to_response('age-error.html',context,context_instance=RequestContext(request))	
 			entry = form.save()
 			request.session.flush()
-			return HttpResponseRedirect('/listUsers')
+			return HttpResponseRedirect('/RegisteredEntries')
 		else:
 			#print form.fields['userContact'].initial
 			#print form.fields['userName'].initial
@@ -234,6 +234,8 @@ def group_blood(request, bloodgroup):
 	user_list = User.objects.filter(userBloodGroup=bloodgroup)
 	return render_to_response('list.html',{'users':user_list})
 
-def features(request):
+'''def features(request):
 	return render_to_response('features.html')
-
+'''
+def developer(request):
+	return render_to_response('myself.html')

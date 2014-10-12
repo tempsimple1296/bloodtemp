@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles%}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+	<div class="jumbotron">
+	<h1>Register For Blood App</h1>
+        <p class="lead">Just By Donating Blood , You Can Save Someone's Life...</p>
+      </div>
+    <div id="example" class="container">
+	
+{% if form.errors %}
+    <p>NOT VALID</p>
+    {% for errors in form.errors %}
+<div data-alert class="alert-box success radius">
+{{ errors }}
+  <a href="#" class="close">&times;</a>
+</div>        
+    {% endfor %}
+{% endif %}
+	<div class="row">
+	<div class="form-group form-group-lg">
+		<div class="col-md-4 col-md-offset-4 panel panel-default" style="padding:20px;background:#e8e8e8" >
+			<form  action="" method="post" >
+				{% csrf_token %}
+				<label for="formGroupInputLarge" class="control-label col-xs-3">NAME</label>
+					<div class="col-sm-10 ">
+    						{{ form.userName }}
+<!--span class="glyphicon glyphicon-search"></span-->	
+					</div>
+				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px" class="col-xs-3 control-label">AGE</label>
+					
+					<div class="col-sm-10 ">    				
+						{{ form.userAge }}	
+					</div>
+					
+				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px" class="control-label col-xs-3">LOCATION</label>
+					<div class="col-sm-10">					    							{{ form.userLoc }}	
+					</div>			
+				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px" class=" control-label col-xs-3">BLOODGROUP</label>		{{form.userBloodGroup.errors}}
+					<div class="col-sm-10" >    
+						{{ form.userBloodGroup }}
+				
+					</div>
+				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px"  class="control-label col-xs-3">CONTACT</label>
+					<div class="col-sm-10">    
+						{{ form.userContact }}	
+					</div>	
+				<label for="formGroupInputLarge" style="margin-right:100px;margin-top:20px"  class="control-label col-xs-3">TIME</label>
+					<div class="col-sm-10">    
+						{{ form.time }}	
+					</div>	
+				<input type="submit" value="Save" class="default btn btn-default col-md-4 col-md-offset-4" style="margin-top:50px" name="_save" />
+			</form>
+		</div>
+	</div>       
+	</div>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js'%}"></script>
+</body>
+</html>
+

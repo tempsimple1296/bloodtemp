@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>
+      FAQ BloodApp(Bleed Red)
+    </title>
+    {% load staticfiles%}
+    <link rel="icon" href="{% static 'images/BloodApp.ico' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}">
+    </script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}">
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+		<h3 class="text-muted">
+          Blood App
+        </h3>
+        <ul class="nav nav-justified">
+          <li class>
+            <a href="/">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/termsAndCondition">
+              Terms And Conditions
+            </a>
+          </li>
+          <li>
+            <a href="/am-I-Eligible">
+              Who Is Eligible
+            </a>
+          </li>
+          <li class="active">
+            <a href="/FAQ">
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a href="/listUsers">
+              Registered Entries
+            </a>
+          </li>
+          <li>
+            <a href="/whyBloodApp">
+              Why BloodAPP is Made?
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="jumbotron">
+        <u>
+          <h1>
+            Frequently Asked Questions
+          </h1>
+        </u>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              Is there any danger in donating blood?
+            </h3>
+          </u>
+          <p>
+            There is virtually no danger. Only sterile and disposable needles are used to collect blood.There is absolutely no chance of catching any infectious disease by donating blood.
+          </p>
+        </div>
+        
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              Will I get AIDS?
+            </h3>
+          </u>
+          <p>
+            Absolutely not! All equipments used to collect blood are sterile. These items are used once and discarded. Blood collections are performed by professionally trained blood bank personnel whose primary concern is your safety and the safety of the blood to be transfused.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              Will it hurt?
+            </h3>
+          </u>
+          <p>
+            Giving blood is not painful. You may feel a pinch in the beginning lasting only a couple of seconds. 
+          </p>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              Why do I have to wait for three months before donating again?
+            </h3>
+          </u>
+          <p>
+            Since blood contains iron (which is essential for making new red blood cells), donating blood more often than every 3 months causes the body to lose iron faster than it can be made up from iron-containing foods in our diet. As a result the donor could develop iron deficiency anemia, causing him/her to feel weak and tired.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              I suffer from diabetes, Can i Still Donate Blood?
+            </h3>
+          </u>
+          <p>
+            Yes one can still donate blood if you are on oral medication for diabetes and are not insulin-dependent, you are a good candidate to donate blood. All you need to do is keep a few of these parameters in mind before you donate. You should not have donated blood for at least 56 days, and  should be generally healthy. If you suffer from high blood pressure or any other heart disease, make sure to consult your doctor before you donate blood.
+          </p>
+        </div>
+        
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              What if I faint?
+            </h3>
+          </u>
+              <p>
+                The likelihood of this happening is minimal. You should eat before donating and drink extra fluids, especially after your donation.
+              </p>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              Can one donate blood if one’s body weight is less than 45 kg?
+            </h3>
+          </u>
+          <p>
+            Not desirable. But in extreme emergency, a margial difference in weight to the tune of 1 to 2 kg is not harmful, so long as body weight x 8ml is above or equal to the volume of donation.
+          </p>
+        </div>
+        
+        <div class="col-lg-4">
+          <u>
+            <h3>
+              Will I become weak if I donate frequently?
+            </h3>
+          </u>
+          <p>
+            No. It is perfectly healthy to donate blood once in every 3 months for an individual.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+

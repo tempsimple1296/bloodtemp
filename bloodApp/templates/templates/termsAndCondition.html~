@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <title>
+    Terms And Conditions
+  </title>
+  {% load staticfiles%}
+  <link rel="icon" href="{% static 'images/BloodApp.ico' %}">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/justified-nav.css' %}" rel="stylesheet">
+  <script src="{% static 'js/ie-emulation-modes-warning.js' %}">
+  </script>
+  <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}">
+  </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <h3 class="text-muted">
+          Blood App
+      </h3>
+      <ul class="nav nav-justified">
+        <li>
+          <a href="/">
+            Home
+          </a>
+        </li>
+        <li class="active">
+          <a href="/termsAndCondition">
+            Terms And Conditions
+          </a>
+        </li>
+        <li>
+          <a href="/am-I-Eligible">
+            Who Is Eligible
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="/listUsers">
+            Registered Entries
+          </a>
+        </li>
+        <li>
+          <a href="/whyBloodApp">
+            Why BloodAPP is Made?
+          </a>
+        </li>
+      </ul>
+      </div>
+      <div class="jumbotron">
+        <u>
+          <h1>
+            Terms And Conditions
+          </h1>
+        </u>
+      </div>
+      
+      <div class="row" style="margin-left: auto;margin-right: auto;">
+        <div class="col-lg-12" style="text-align: center">
+          <u>
+            <h2>
+              1. Data Which BloodApp Show Publically
+            </h2>
+          </u>
+          <p>
+            <strong>
+              1)Name
+              <br>
+              
+            </strong>
+            (As per Entered By You At Time of Registeration)
+            <br>
+            <br>
+            <strong>
+              2)Age 
+              <br>
+            </strong>
+            (As per Entered By You At Time of Registeration)
+            <br>
+            <br>
+            <strong>
+              3)Location
+              <br>
+            </strong>
+            (As per Entered By You At Time of Registeration)
+            <br>
+            <br>
+            <strong>
+              4)Blood Group
+              <br>
+            </strong>
+            (As per Entered By You At Time of Registeration)
+            <br>
+            <br>
+            <strong>
+              5)Registered On
+              <br>
+            </strong>
+            (Automatic TimeStamp Recorded At Time Of Regsitration)
+            <br>
+            <br>
+            <strong>
+              6)Contact
+              <br>
+            </strong>
+            (If Connected With Facebook Then Facebook Profile Link Else Google+ Profile Link)
+          </h3>
+      </u>
+  </p>
+  </div>
+  
+</div>
+
+<div class="row" style="margin-top:50px;margin-left: auto;margin-right: auto;">
+  
+  <div class="col-lg-6">
+    
+    <p>
+      <h4>
+        <strong>
+          2. 
+        </strong>
+        BloodApp Does Not Guarentee that the Donor is Correct About his/her Blood Group , So It is Adviced To Acceptor Always Have A Person's Medical Check-Up Before Blood Donation Process.
+    </h4>
+  </p>
+</div>
+<div class="col-lg-6">
+  <p>
+    <h4>
+      <strong>
+        3. 
+      </strong>
+      BloodApp is Not Made in The Favour Of PAID DONORS. The Donors Here Registered Are Free Donors. If Some Donor demands Money After Donation , it's of NO CONCERN WITH BLOODAPP So a Acceptor must ask the donor about the same before donation.
+  </h4>
+</p>
+
+</div>
+</div>
+<div class="row" style="margin-left: auto;margin-right: auto;">
+  <div class="col-lg-6">
+    <p>
+      <h4>
+        <strong>
+          4. 
+        </strong>
+        BloodApp Advice To Acceptor But Not An Instruction :
+        <br>
+        If Acceptor Thinks That the Person Is Fake by Looking On Profile(either 
+        <strong>
+          Facebook Profile OR Google+ Profile
+        </strong>
+        ) of Regsitered Donor , then Acceptor Must Not Take The Risk To Contact as it can be time waste And Should Choose The Next Registered Donor In The List.			
+    </h4>
+  </p>
+  
+</div>
+<div class="col-lg-6">
+  <p>
+    <h4>
+      <strong>
+        5. 
+      </strong>
+      If you Click On "Register With Facebook Button" OR "Register With Google", it simply means that You Have Carefully Read all the points mentioned above and also read that "Who Is Eligible To Donate Blood"(
+      <a href="/am-I-Eligible">
+        Click Here To Know Who Is Eligible
+      </a>
+      ) and You Have No Problem From BloodApp Sharing Your Public Information As Mentioned Above. 
+  </h4>
+</p>
+</div>
+</div>
+<div class="footer">
+  <font style="color:grey">
+    <h3>
+      For Any Suggestions Or Queries Mail Us At : pmBloodApp@gmail.com
+    </h3>
+  </font>
+</div>
+</div>
+
+</body>
+</html>
+

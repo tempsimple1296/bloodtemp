@@ -9,15 +9,16 @@ import social_auth
 
 urlpatterns = [
     url(r'',include('social_auth.urls')),
-    url(r'^listUsers/$',views.listAll),
     url(r'^$', views.home),
-    url(r'^group/',views.groups),
+url(r'^RegisteredEntries/$',views.registered_entries),
+        
+url(r'^group/',views.groups),
     url(r'^count/',views.count),
     url(r'^home/',views.index),
     url(r'^register/',views.signin),
     url(r'^registerUser/',views.register),
 #    url(r'complete/facebook/',views.register),
-    url(r'^profile/',views.profile),
+    #url(r'^profile/',views.profile),
     url(r'^admin/', include(admin.site.urls)),
     url('account-already-associated',views.CustomSocialAuthExceptionMiddleware),
     url(r'^account/error/',views.showError),
@@ -26,9 +27,10 @@ urlpatterns = [
     url(r'^termsAndCondition/$',views.termsAndCondition),
     url(r'^FAQ/$',views.FAQ),
     url(r'^whyBloodApp',views.whyBloodApp),
-    url(r'^features/',views.features),
+    #url(r'^features/',views.features),
     url(r'^logout/',views.logout),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^aboutMe/',views.developer),
+]
 
 urlpatterns += staticfiles_urlpatterns()
 
