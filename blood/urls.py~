@@ -30,6 +30,8 @@ url(r'^group/',views.groups),
     #url(r'^features/',views.features),
     url(r'^logout/',views.logout),
     url(r'^aboutMe/',views.developer),
+    url(r'^google37e4d89724d52b78.html/',views.webmaster),
+    url(r'^prateek/sitemap',views.sitemap),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

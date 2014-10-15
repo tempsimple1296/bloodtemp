@@ -10,6 +10,12 @@ from django.shortcuts import redirect
 from urllib import * 
 from social_auth.middleware import SocialAuthExceptionMiddleware
 from social_auth.exceptions import AuthAlreadyAssociated
+
+def sitemap(request):
+	return render_to_response('sitemap.xml')
+
+def webmaster(request):
+	return render_to_response('google37e4d89724d52b78.html')
  
 class CustomSocialAuthExceptionMiddleware(SocialAuthExceptionMiddleware):
     def get_redirect_uri(self, request, exception):

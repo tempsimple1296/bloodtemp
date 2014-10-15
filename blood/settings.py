@@ -28,12 +28,12 @@ TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS +('dj
 SECRET_KEY = 'jwsgn1)2jc6_bm6rhs3d558_#0bgsjxbut#fdry08(&0*(opv1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
-TEMPLATE_DEBUG = True
-#TEMPLATE_DEBUG = False
+#TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','www.bleedred.org']
 
 
 # Application definition
